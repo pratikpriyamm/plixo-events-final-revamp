@@ -9,16 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function initHeroSlideshow(container) {
     try {
-        // 1. Fetch the image data (FIXED FOR GITHUB PAGES)
-        // Check if we are inside the 'services' subfolder
+        // 1. Fetch the image data (GITHUB PAGES SAFE)
+        // If we are in the /services/ folder, go up one level ('../'). Otherwise, stay here ('./').
         const isServicePage = window.location.pathname.includes('/services/');
-        const basePath = isServicePage ? '../' : './';
+        const jsonPath = isServicePage ? '../gallery.json' : './gallery.json';
         
-        const response = await fetch(basePath + 'gallery.json');
+        const response = await fetch(jsonPath);
         if (!response.ok) throw new Error("Failed to load gallery data");
         const data = await response.json();
 
-        // 2. Identify which category to show (based on data-id in HTML)
+        // 2. Identify which category to show
         const categoryId = container.getAttribute('data-id');
         const categoryData = data.find(item => item.id === categoryId);
 
@@ -27,7 +27,7 @@ async function initHeroSlideshow(container) {
             return;
         }
 
-        // 3. Render the images (Passing 'isServicePage' to fix image paths too)
+        // 3. Render the images
         renderSlides(container, categoryData.images, isServicePage);
 
         // 4. Initialize the Button Controls
@@ -44,7 +44,7 @@ function renderSlides(container, images, isServicePage) {
 
     images.forEach((src, index) => {
         const slide = document.createElement('div');
-        slide.className = 'mySlides fade'; // 'fade' class for CSS animation
+        slide.className = 'mySlides fade'; 
         
         // Show the first slide by default
         if (index === 0) slide.style.display = 'block';
@@ -52,14 +52,8 @@ function renderSlides(container, images, isServicePage) {
 
         const img = document.createElement('img');
         
-        // FIX FOR GITHUB PAGES IMAGE PATHS
-        // If we are in the services folder, we need to add '../' to the image paths 
-        // (Assuming the JSON has paths like "images/social-1.jpg")
-        if (isServicePage && !src.startsWith('../')) {
-            img.src = '../' + src;
-        } else {
-            img.src = src;
-        }
+        // GitHub Pages Image Pathing Fix
+        img.src = isServicePage ? '../' + src : './' + src;
         
         img.style.width = '100%';
         img.alt = "Slideshow Image";
