@@ -1,0 +1,2484 @@
+index.html-
+html -
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plixo Events | Premium Event Planning</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Serif+Display&family=Inter:wght@400;600;900&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="logo-container">
+            <img src="images/plixo-logo.jpg" alt="Plixo Events" class="logo-img">
+        </a>
+        
+        <button class="nav-toggle" id="mobile-menu-btn">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About Us</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#highlights" class="nav-link">Highlights</a></li>
+            <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main class="main-layout">
+        
+        <div class="hero-media">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="videos/hero.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+
+        <div class="hero-text-block">
+            <div class="hero-content">
+                <h1>Premium Event Planning & Execution</h1>
+                <!-- <p class="hero-subtext">Disciplined planning. Flawless execution.</p> -->
+                <a href="#contact" class="btn-primary">Get a Free Event Plan</a>
+            </div>
+        </div>
+
+        </div>
+
+<section id="about" class="about-section bg-ivory">
+    <div class="container">
+        
+        <div class="about-header">
+            <span class="about-label">about</span> 
+            <div class="giant-text-mask">US</div>
+        </div>
+
+        <div class="about-content-wrapper collapsed" id="about-wrapper">
+            <div class="about-text-inner">
+                <p class="lead-text">
+                    Plixo Events is a global experiential marketing company, delivering impact-driven brand experiences. With a legacy spanning over three decades, we integrate strategy, creativity, and technology to deliver solutions that inspire.
+                </p>
+                <p>
+                    Headquartered in Delhi, Plixo has offices in Jaipur, Noida, Pushkar with international liaison offices and a global partner network. Our brand portfolio spans a wide range of industries and geographies, with 600+ global brands investing their trust in us.
+                </p>
+                <p>
+                    Plixo has emerged as a pioneer in the space of In-Person and Virtual Events, Exhibitions, Brand Activation, Advertising, and Live Entertainment. From historic concerts to the BMW Experience Tour; from Tata Motors at Auto Expo to influencer activations for Hyundai. In today's virtual age, we continue to set industry benchmarks with exclusive virtual media launches, product reveals, and business meets.
+                </p>
+                <p>
+                    Our corporate clients partner with us to execute immersive and engaging industry conferences, business meets, and annual parties. Our data-derived solutions and lead generation campaigns help brands effectively reach their target audience. Plixo's solutions not only set trends but also drive business outcomes.
+                </p>
+            </div>
+        <div class="fade-overlay"></div>
+        </div>
+        
+        <div class="read-more-container">
+            <button id="read-more-btn" class="btn-secondary">Read More</button>
+        </div>
+        
+    </div>
+</section>
+
+</main>
+
+<section id="services" class="services-section">
+    <section id="services" class="services-section">
+    
+        <div class="services-header-box">
+            <h2 class="house-title">The House of Plixo</h2>
+        </div>
+
+        <div class="services-stack">
+            </div>
+        
+    </section>
+    <div class="services-stack">
+        
+        <div class="service-block" onclick="toggleBlock(this)">
+            <div class="block-thumb" style="background-image: url('images/thumbnails/corporate-thumb.jpg');">
+                <div class="border-box">
+                    <h3>Corporate Events</h3>
+                </div>
+            </div>
+            
+            <div class="block-overlay color-teal">
+                <div class="overlay-content">
+                    <h3>Corporate Events</h3>
+                    <p>Immersive conferences, product launches, and business meets that drive impact.</p>
+                    <a href="services/corporate.html" class="btn-rect small-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-block" onclick="toggleBlock(this)">
+            <div class="block-thumb" style="background-image: url('images/thumbnails/wedding-thumb.jpg');">
+                <div class="border-box">
+                    <h3>Weddings</h3>
+                </div>
+            </div>
+            
+            <div class="block-overlay color-gold">
+                <div class="overlay-content">
+                    <h3>Weddings</h3>
+                    <p>Curating timeless moments and bespoke experiences for your special day.</p>
+                    <a href="services/wedding.html" class="btn-rect small-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-block" onclick="toggleBlock(this)">
+            <div class="block-thumb" style="background-image: url('images/thumbnails/private-thumb.jpg');">
+                <div class="border-box">
+                    <h3>Private Events</h3>
+                </div>
+            </div>
+            
+            <div class="block-overlay color-purple" onclick="toggleBlock(this)">
+                <div class="overlay-content">
+                    <h3>Private Events</h3>
+                    <p>Exclusive gatherings executed with privacy, elegance, and precision.</p>
+                    <a href="services/private.html" class="btn-rect small-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="highlights" class="highlights-section">
+    
+    <div class="services-header-box">
+        <h2 class="house-title">Recent Highlights</h2>
+    </div>
+
+    <div class="gallery-container">
+        
+        <a href="gallery.html?category=corporate" class="gallery-item">
+            <div class="gallery-img-box" style="--thumb-bg: url('images/thumbnails/corporate-thumb.jpg');">
+                <span class="desktop-label">Corporate Events</span>
+            </div>
+            <span class="gallery-action-btn">View Pictures</span>
+        </a>
+
+        <a href="gallery.html?category=weddings" class="gallery-item">
+            <div class="gallery-img-box" style="--thumb-bg: url('images/thumbnails/wedding-thumb.jpg');">
+                <span class="desktop-label">Weddings</span>
+            </div>
+            <span class="gallery-action-btn">View Pictures</span>
+        </a>
+
+        <a href="gallery.html?category=private" class="gallery-item">
+            <div class="gallery-img-box" style="--thumb-bg: url('images/thumbnails/private-thumb.jpg');">
+                <span class="desktop-label">Private Events</span>
+            </div>
+            <span class="gallery-action-btn">View Pictures</span>
+        </a>
+
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    
+    <div class="container">
+        <div class="services-header-box">
+            <h2 class="house-title">Contact Us</h2>
+            <p class="section-subtitle">Let's create something extraordinary</p>
+        </div>
+
+        <div class="contact-form-wrapper">
+            
+            <form action="https://formsubmit.co/plixoevents@gmail.com" method="POST" class="plixo-form">
+                
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="New Inquiry - Plixo Events Website">
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Full Name *" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="company" placeholder="Company">
+                    </div>
+                </div>
+
+                <div class="form-row full-width">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email ID *" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+    <div class="input-group">
+        <input type="tel" name="phone" placeholder="Phone Number *" required>
+    </div>
+    
+    <div class="input-group location-group">
+        
+        <select name="location" id="location-select" required>
+            <option value="" disabled selected>Select Location *</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Noida">Noida</option>
+            <option value="Gurgaon">Gurgaon</option>
+            <option value="Faridabad">Faridabad</option>
+            <option value="International">International</option>
+            <option value="Others">Others (Specify)</option>
+        </select>
+
+        <input type="text" 
+               name="custom_location" 
+               id="other-location-input" 
+               placeholder="Enter your location *" 
+               class="hidden-input">
+    </div>
+</div>
+
+                <div class="form-row full-width">
+                    <div class="input-group">
+                        <textarea name="message" rows="5" placeholder="Message (Minimum 150 characters) *" minlength="150" required></textarea>
+                        <div class="char-count">0 / 150 characters</div>
+                    </div>
+                </div>
+
+                <div class="form-btn-wrapper">
+                    <button type="submit" class="btn-submit">Send</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="plixo-footer">
+    <div class="container">
+        
+        <div class="footer-top-row">
+            
+            <div class="footer-info-block">
+                <h3 class="footer-heading">CONTACT US</h3>
+                <div class="info-content">
+                    <p class="info-label">For Business Enquiries:</p>
+                    <a href="mailto:info@plixoevents.com" class="info-link">info@plixoevents.com</a>
+                </div>
+                <div class="info-content">
+                    <p class="info-label">Phone:</p>
+                    <a href="tel:+919876543210" class="info-link">+(91) 98765 43210</a>
+                    <p class="info-sub">Whatsapp: <strong>98765 43210</strong></p>
+                </div>
+            </div>
+
+            <div class="footer-info-block border-top-mobile">
+                <h3 class="footer-heading">WORK WITH US</h3>
+                <div class="info-content">
+                    <p class="info-label">Career in Plixo:</p>
+                    <a href="mailto:hr@plixoevents.com" class="info-link">hr@plixoevents.com</a>
+                </div>
+                <div class="info-desc">
+                    <p>Plixo Events is one of the leading corporate event management companies. We are set to create unforgettable corporate events globally.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-links-row">
+            
+            <div class="footer-col">
+                <h4 class="col-heading"><a href="#about">ABOUT US</a></h4>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="col-heading">OUR BUSINESSES</h4>
+                <ul class="footer-list">
+                    <li><a href="#corporate">Corporate Events</a></li>
+                    <li><a href="#services">Weddings</a></li>
+                    <li><a href="#private">Private Events</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="col-heading">LOCATIONS</h4>
+                <ul class="footer-list two-col-list">
+                    <li>Delhi NCR</li>
+                    <li>Rajasthan</li>
+                    <li>Uttrakhand</li>
+                    <li>Himachal Pradesh</li>
+                    <li>Lucknow</li>
+                    <li>Gorakhpur</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="copyright-bar">
+        <p>All Rights Reserved © 2026 Plixo Events Pvt. Ltd.</p>
+    </div>
+</footer>
+
+    <div class="hanging-menu">
+    <a href="#home" class="social-btn" title="Home">
+        <i class="fa-solid fa-house"></i>
+    </a>
+    
+    <a href="https://wa.me/919355063737" target="_blank" class="social-btn" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <a href="https://instagram.com/plixo_events" target="_blank" class="social-btn" title="Follow on Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    
+    <a href="mailto:plixoevents@gmail.com" class="social-btn" title="Send Email">
+        <i class="fa-regular fa-envelope"></i>
+    </a>
+</div>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
+this is html file, css will be there in the next message and then js
+
+css-
+style.css -
+/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
+:root {
+    --charcoal: #121212;
+    --ivory: #FAF9F6;
+    --body-text: #2B2B2B;
+    --muted-text: #6B6B6B;
+    --divider: #E6E6E6;
+    --primary-accent: #0E5A5A; 
+    --primary-hover: #0B4A4A;
+    --white: #FFFFFF;
+    
+    --radius-card: 12px;
+    --radius-btn: 6px;
+
+    /* FONTS */
+    --font-heading: 'DM Serif Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-deco: 'Oswald', sans-serif;       /* Instagram "Modern" look */
+    --font-directional: 'Archivo Black', sans-serif; /* Instagram "Strong" look */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--ivory);
+    color: var(--body-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   2. TYPOGRAPHY & BUTTONS
+   ========================================= */
+h1, h2, h3 { font-family: var(--font-heading); color: var(--charcoal); font-weight: 400; }
+
+h2 { font-size: 2rem; margin-bottom: 4%; }
+h3 { font-size: 1.5rem; margin-bottom: 2%; }
+p { font-size: 1.125rem; color: var(--muted-text); margin-bottom: 5%; }
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-accent);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: var(--radius-btn);
+    transition: background 0.3s;
+}
+.btn-primary:hover { background-color: var(--primary-hover); }
+
+/* =========================================
+   3. NAVIGATION
+   ========================================= */
+.navbar {
+    background-color: var(--white);
+    padding: 4% 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--divider);
+}
+
+.nav-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- LOGO STYLES (Hanging Effect) --- */
+.logo-container {
+    position: relative; 
+    height: 40px; /* Keeps nav bar thin */
+    width: 140px; 
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1002; /* Sits above video */
+    cursor: pointer;
+}
+
+.logo-img {
+    position: absolute;
+    height: 100px; /* Big logo */
+    width: auto; 
+    top: 50%;
+    transform: translateY(-50%);
+    left: -13%; /* Shifted left */
+}
+
+/* --- HAMBURGER BUTTON --- */
+.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative; 
+    width: 30px;
+    height: 20px;
+    z-index: 1001;
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--charcoal);
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+.line:nth-child(1) { top: 0; }
+.line:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.line:nth-child(3) { bottom: 0; }
+
+/* Hamburger Animation States */
+.nav-toggle.open .line:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.nav-toggle.open .line:nth-child(2) { opacity: 0; transform: scale(0); }
+.nav-toggle.open .line:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+/* --- MENU LIST --- */
+.nav-menu {
+    position: absolute;
+    top: 100%; left: 0;
+    width: 100%;
+    background-color: var(--white);
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+.nav-menu.active { max-height: 400px; padding-bottom: 5%; }
+.nav-menu li { margin: 4% 0; }
+.nav-menu a { text-decoration: none; color: var(--body-text); font-weight: 500; }
+
+/* =========================================
+   FORCE FIX: NAVBAR MENU LINKS
+   ========================================= */
+
+/* 1. Base State (Greyish White & Bigger) */
+.nav-menu .nav-link {
+    /* Color: Greyish White (High Contrast) */
+    color: rgba(255, 255, 255, 0.75) !important;
+    
+    /* Font: Much Larger & Readable */
+    font-family: var(--font-deco) !important;
+    font-size: 1.5rem !important; /* Increased size for visibility */
+    font-weight: 500 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    
+    /* Smooth Transition (Crucial for the "buttery" feel) */
+    /* We apply this to the BASE state so it animates IN and OUT */
+    transition: color 0.4s ease-out, text-shadow 0.4s ease-out, transform 0.4s ease-out !important;
+}
+
+/* 2. Hover State (Pure White & Glow) */
+.nav-menu .nav-link:hover {
+    /* Color: Bright White */
+    color: #ffffff !important;
+    
+    /* Glow Effect */
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8) !important;
+    
+    /* Smooth Movement: Slide right slightly */
+    transform: translateX(10px) !important;
+}
+
+/* 3. Mobile Specific Adjustments (If needed) */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        /* Ensure the mobile menu container allows white text to pop */
+        /* If your mobile menu background is white, you won't see white text! 
+           Assuming your mobile menu has a dark background based on your image: */
+        background-color: rgba(0, 0, 0, 0.95) !important; 
+    }
+    
+    .nav-menu .nav-link {
+        font-size: 1.8rem !important; /* Even bigger on mobile for easy tapping */
+        margin: 15px 0 !important;     /* Spacing between links */
+        display: block !important;
+    }
+}
+
+/* =========================================
+   4. LAYOUT SYSTEM (Mobile First)
+   This section handles the reordering:
+   Video (1) -> About (2) -> Text (3)
+   ========================================= */
+
+/* Parent Wrapper for the main page content */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* --- A. HERO VIDEO (Order: 1) --- */
+.hero-media {
+    order: 1;
+    position: relative;
+    width: 100%;
+    height: 35vh; /* Fixed strip height for mobile */
+    overflow: hidden;
+    background-color: var(--charcoal);
+}
+
+.hero-video { width: 100%; height: 100%; object-fit: cover; }
+
+.video-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.1); 
+}
+
+/* 1. The Container - Centers the text over the video */
+.hero-text-block {
+    position: absolute;       /* Takes it out of normal flow */
+    top: 80%;                 /* Move down 50% */
+    left: 38%;                /* Move right 50% */
+    transform: translate(-50%, -50%); /* Center it perfectly */
+    z-index: 10;              /* Ensure it sits on top of video */
+    
+    /* Sizing for Mobile (35vh is short, so we need to be compact) */
+    width: 90%; 
+    max-width: 400px;
+    padding: 15px;            
+    text-align: center;
+}
+
+/* 3. Text Styling */
+.hero-text-block h1 {
+    color: #ffffff;
+    font-size: 1.5rem;        /* Smaller font for mobile */
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 15px 0;       /* Spacing below title */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5); /* Shadow for readability */
+}
+
+/* 4. Button Styling */
+.hero-text-block .btn-primary {
+    display: inline-block;
+    background-color: #0E5A5A; /* Your Brand Teal */
+    color: white;
+    text-decoration: none;
+    font-size: 0.7rem;
+    padding: 4px 6px;
+    border-radius: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+.hero-text-block .btn-primary:active {
+    transform: scale(0.95);
+}
+
+.hero-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font: var(--font-body);
+    color: rgb(255, 255, 255); 
+    font-size: 1rem; 
+    font-weight: 200;
+    line-height: 1.2;
+    margin-bottom: 3%;
+}
+
+/* .hero-content p {
+    color: var(--body-text);
+    font-size: 1rem;
+    margin-bottom: 8%;
+    max-width: 90%;
+} */
+
+
+/* --- B. ABOUT SECTION (Order: 2) --- */
+.about-section {
+    order: 2;
+    padding: 8% 0;
+    background-color: var(--ivory);
+}
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.about-label {
+    font-family: var(--font-deco); 
+    font-size: 1.5rem; 
+    color: var(--charcoal);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    margin-left: 0; 
+    margin-bottom: -2%; 
+    padding: 10px;
+}
+
+.giant-text-mask {
+    font-family: var(--font-directional);
+    font-size: 50vw; 
+    font-weight: 400; 
+    font-style: normal; 
+    line-height: 0.75; 
+    text-transform: uppercase;
+    
+    background-image: url('images/event-crowd.jpg'); 
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+    margin-bottom: 5%;
+    transform: none;
+    padding: 10px;
+    margin-left: -3.5vw; /* Alignment Fix */
+}
+
+/* Collapse / Read More Logic */
+.about-content-wrapper {
+    position: relative;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+    padding: 10px;
+}
+.about-content-wrapper.collapsed { max-height: 208px; /* Hidden height */ }
+.about-content-wrapper.expanded { max-height: 1000px; /* Full height */ }
+
+.fade-overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 80px;
+    background: linear-gradient(to bottom, rgba(250, 249, 246, 0.2), rgba(250, 249, 246, 1));
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+.about-content-wrapper.expanded .fade-overlay { opacity: 0; }
+
+.read-more-container { text-align: center; margin-top: 15px; }
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--charcoal);
+    color: var(--charcoal);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+/* =========================================
+   6. DESKTOP ENHANCEMENTS
+   ========================================= */
+@media screen and (min-width: 1024px) {
+
+    /* --- TYPOGRAPHY --- */
+    h1 { font-size: 4rem; } 
+    h2 { font-size: 3rem; }
+
+    /* --- LAYOUT GRID (Restores Overlay Effect) --- */
+    .main-layout {
+        display: grid;
+        grid-template-rows: 100vh auto; /* Row 1: Hero, Row 2: About */
+        grid-template-columns: 1fr;
+    }
+
+    /* 1. Video & Text share Grid Row 1 (Overlay) */
+    .hero-media {
+        grid-row: 1; grid-column: 1;
+        height: 100%;
+        order: unset;
+        z-index: 1;
+    }
+    .video-overlay { background: rgba(0, 0, 0, 0.5); }
+
+    .hero-text-block {
+        grid-row: 1; 
+        grid-column: 1;
+        z-index: 2;
+        
+        display: flex;
+        flex-direction: column; /* Stacks text vertically */
+        justify-content: center; /* Vertically center in the screen */
+        align-items: flex-start; /* Push the whole block to the RIGHT */
+        
+        padding-right: 8%; /* Spacing from the right edge */
+        
+        background: transparent;
+        text-align: center; /* KEY: Creates the Pyramid shape */
+        margin-top: 0;
+        pointer-events: none; 
+    }
+
+    @media screen and (min-width: 1024px) {
+
+    /* 1. PARENT CONTAINER (Positions the block on the screen) */
+    .hero-text-block {
+        /* Grid Position: Top row, full width */
+        grid-row: 1; 
+        grid-column: 1;
+        z-index: 2; /* Sits above video */
+        
+        /* Flexbox to position the content box */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Vertical Center */
+        
+        /* HORIZONTAL POSITION CONTROLS */
+        /* use 'flex-start' for Left, 'center' for Middle, 'flex-end' for Right */
+        align-items: flex-end; 
+        
+        /* Spacing from the Right Edge */
+        padding-right: 10%; 
+        
+        background: transparent;
+        pointer-events: none; /* Let clicks pass through empty space */
+    }
+
+    /* 2. TEXT CONTENT BOX (Controls text alignment) */
+    .hero-content {
+        max-width: 700px; /* How wide the text block can get */
+        color: white;
+        pointer-events: auto; /* Re-enable clicking for buttons */
+        
+        /* FLEX SETTINGS FOR PYRAMID ALIGNMENT */
+        display: flex;
+        flex-direction: column;
+        
+        /* ALIGNMENT CONTROLS */
+        /* Change to 'flex-start' for Left Aligned text */
+        /* Change to 'center' for Pyramid/Centered text */
+        align-items: center; 
+        text-align: center;
+    }
+    
+    /* 3. HEADLINE STYLING */
+    .hero-content h1 {
+        font-family: var(--font-heading); /* Ensure you use your font variable */
+        font-size: 5rem; /* Large Desktop Size */
+        color: white;
+        margin-bottom: 20px;
+        line-height: 1.1;
+        font-weight: 700;
+        
+        /* Remove invalid align-items here */
+        width: 100%;
+    }
+    
+    /* 4. PARAGRAPH STYLING */
+    /* .hero-content p { */
+        /* color: rgba(255,255,255,0.9); */
+        /* font-size: 1.3rem; */
+        /* font-weight: 400; */
+        
+        /* Spacing */
+        /* margin-bottom: 35px; */
+        
+        /* KEY FIX: Center the paragraph box */
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        
+        /* Ensure text inside is also centered */
+        /* text-align: center; */
+        
+        /* Width Control */
+        /* max-width: 80%;  */
+    /* } */
+    
+}
+    /* Button Wrapper to center the button */
+    .hero-btn-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* 2. About Section moves to Row 2 */
+    .about-section {
+        grid-row: 2; grid-column: 1;
+        order: unset;
+    }
+    .about-header { max-width: 80%; }
+    
+    /* Desktop Sizing for "US" Mask */
+    .giant-text-mask {
+        font-size: 25rem; 
+        margin-left: -24px;
+    }
+    .about-label {
+        font-size: 2rem;
+        margin-bottom: -10px;
+        margin-left: 5px;
+    }
+
+    /* --- NAVIGATION --- */
+    .logo-img { height: 130px; }
+    .logo-container { width: 200px; }
+    .nav-toggle { display: block; width: 40px; height: 30px; }
+    .line { height: 4px; }
+
+    /* --- SERVICES GRID --- */
+    .grid-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 3.5%;
+    }
+    .card {
+        width: 31%; 
+        margin-bottom: 0; 
+        padding: 40px; 
+    }
+}
+
+/* =========================================
+   6. HANGING SOCIAL MENU (Glass Background)
+   ========================================= */
+
+.hanging-menu {
+    position: fixed;
+    
+    /* VERTICAL ALIGNMENT (Gap Control) */
+    /* Match this to your Navbar height exactly */
+    top: 78px; 
+    margin-top: -5px;
+    right: 5%; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px; 
+    
+    /* --- GLASS BACKGROUND EFFECT --- */
+    /* 1. Semi-transparent Teal (Background ONLY) */
+    background: rgba(14, 90, 90, 0.65);
+    
+    /* 2. Blur the content behind it */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); 
+    
+    /* 3. Glass Borders (Sides & Bottom only) */
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* KEY: No border at top so it merges with navbar */
+    border-top: none; 
+    
+    width: 45px;
+    padding-top: 15px; 
+    padding-bottom: 20px; 
+    
+    /* Rounded bottom */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+    /* Shadow */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    
+    /* Behind Navbar */
+    z-index: 999; 
+    
+    animation: dropDown 0.8s ease-out;
+}
+
+/* Icons - Kept Solid White */
+.social-btn {
+    color: #FFFFFF; /* Pure White */
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s;
+    opacity: 1;
+    
+    /* Subtle shadow to make white icon pop on glass */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+}
+
+.social-btn:hover {
+    transform: scale(1.2); 
+    opacity: 0.9;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .hanging-menu {
+        right: 20px; 
+        top: 75px; 
+        width: 40px;
+        gap: 15px;
+    }
+}
+
+/* =========================================
+   UPDATED DROPDOWN MENU (Square & Glass)
+   ========================================= */
+
+.nav-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    
+    /* --- GLASSMORPHISM --- */
+    background: rgba(14, 90, 90, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    
+    /* Smooth Transition */
+    transition: max-height 0.4s ease-in-out;
+    
+    text-align: left;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    
+    /* --- SQUARE CORNERS (Radius Removed) --- */
+    border-radius: 0;
+    
+    z-index: 1000;
+}
+
+/* Open State */
+.nav-menu.active { 
+    /* We use a large max-height so it can grow, 
+       but JS will calculate the actual slide distance */
+    max-height: 500px; 
+}
+
+.nav-menu li { margin: 0; width: 100%; }
+
+.nav-menu a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background 0.2s;
+}
+
+.nav-menu li:last-child a { border-bottom: none; }
+
+.nav-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
+
+/* =========================================
+   HANGING MENU SLIDE ANIMATION
+   ========================================= */
+
+.hanging-menu {
+    /* Ensure transition matches dropdown speed */
+    transition: transform 0.4s ease-in-out;
+    
+    /* Initial Position: Stick to Navbar Bottom */
+    top: 78px; 
+}
+
+/* Note: We removed the .menu-active class from CSS 
+   because we will set the exact transform value using JS */
+
+/* =========================================
+   DESKTOP FIX FOR HANGING MENU
+   ========================================= */
+
+@media screen and (min-width: 1024px) {
+    .hanging-menu {
+        /* On Desktop, the navbar is taller, so we push the menu down further */
+        /* ADJUST THIS VALUE: Try 140px, 150px, or 160px until it touches the edge */
+        top: 150px; 
+        
+        /* Reset margins if needed */
+        margin-top: 0;
+        
+        /* Optional: Make it slightly larger on desktop */
+        width: 55px;
+        gap: 22px;
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+    
+    .social-btn {
+        font-size: 1.3rem; /* Bigger icons for desktop */
+    }
+    
+    /* Ensure the sliding animation works with this new start position */
+    .hanging-menu.menu-active {
+        /* If you ever use the slide logic on desktop, adjust this too */
+        transform: translateY(0); /* Usually desktop menu doesn't slide the hanging menu */
+    }
+}
+
+/* =========================================
+   8. DESKTOP OVERHAUL (Immersive Video Layout)
+   ========================================= */
+@media screen and (min-width: 1024px) {
+
+    /* --- 1. REMOVE STANDARD NAVBAR --- */
+    /* We make the container invisible so the video shows through */
+    .navbar {
+        background-color: transparent;
+        border-bottom: none;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100vh; /* Covers screen to hold logo/nav */
+        padding: 0;
+        pointer-events: none; /* Allows clicks to pass through empty areas */
+    }
+
+    .nav-container {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        margin: 0;
+        display: block; /* Reset flex */
+    }
+
+    /* --- 2. LOGO (Top Left Overlay) --- */
+    .logo-container {
+        position: absolute;
+        top: 40px;
+        left: 5%;
+        width: 200px;
+        pointer-events: auto; /* Make clickable */
+        
+        /* OPTIONAL: Turn logo white if it's dark, to see it on video */
+        /* Remove this line if your logo is already white/colored */
+        filter: brightness(0) invert(1); 
+    }
+    
+    .logo-img { height: 120px; position: static; transform: none; left: 0; }
+
+    /* --- 3. HIDE HAMBURGER --- */
+    .nav-toggle { display: none; }
+
+    /* --- 4. VERTICAL NAVIGATION (Wizcraft Style) --- */
+    .nav-menu {
+        /* Position: Vertically Centered on the LEFT */
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        
+        display: flex;
+        flex-direction: column; /* Vertical List */
+        gap: 25px; 
+        
+        /* Reset Mobile Styles */
+        background: transparent;
+        backdrop-filter: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-height: none;
+        width: auto;
+        pointer-events: auto;
+        text-align: left;
+    }
+
+    .nav-menu li { width: auto; margin: 0; }
+
+    .nav-menu a {
+        font-family: var(--font-heading); /* Stylish Font */
+        font-size: 2.5rem; /* Large Impactful Text */
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.5); /* Dimmed inactive state */
+        padding: 5px 0 5px 20px; /* Space for the bar */
+        
+        /* The "Bar" is currently hidden */
+        border-left: 5px solid transparent; 
+        border-bottom: none;
+        transition: all 0.3s ease;
+    }
+
+    /* HOVER EFFECT: Brighten text & Show White Bar */
+    .nav-menu a:hover {
+        color: #FFFFFF;
+        background: transparent;
+        border-left: 5px solid #FFFFFF; /* The Vertical Bar */
+        padding-left: 35px; /* Slide text to right */
+    }
+
+    /* --- 5. HANGING MENU (Top Edge) --- */
+    .hanging-menu {
+        /* Stick to the very top since navbar is gone */
+        top: 0;
+        right: 5%;
+        margin-top: 0;
+        
+        /* Only round the bottom corners */
+        border-radius: 0 0 20px 20px;
+        
+        /* Ensure it's reachable */
+        pointer-events: auto;
+    }
+
+    /* --- 6. HERO VIDEO & LAYOUT --- */
+    .main-layout {
+        display: grid;
+        grid-template-rows: 100vh auto;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-video-wrapper {
+        height: 100vh;
+        background: #000;
+        grid-row: 1; grid-column: 1;
+    }
+    
+    .video-overlay { background: rgba(0, 0, 0, 0.4); }
+
+    /* --- 7. HERO TEXT (Move to Right) --- */
+    /* Since Menu is on Left, we move Text to Right for balance */
+    .hero-text-block {
+        grid-row: 1; grid-column: 1;
+        z-index: 2;
+        
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Align Right */
+        padding-right: 8%; /* Spacing from right edge */
+        
+        background: transparent;
+        text-align: right; /* Right align text */
+        margin-top: 0;
+        pointer-events: none; /* Let clicks pass through to video */
+    }
+
+    .hero-content {
+        max-width: 600px;
+        color: white;
+        pointer-events: auto; /* Enable button clicks */
+    }
+    
+    .hero-content h1 {
+        font-size: 4.5rem;
+        color: white;
+        margin-bottom: 20px;
+    }
+    
+    .hero-content p {
+        color: rgba(255,255,255,0.9);
+        font-size: 1.2rem;
+        margin-left: auto; /* Pushes text to right */
+        margin-right: 0;
+    }
+    
+    /* Hide About Section below the fold */
+    .about-section {
+        grid-row: 2;
+    }
+    
+    /* Reset other elements */
+    .grid-row { display: flex; gap: 40px; }
+    .card { width: 31%; margin: 0; padding: 40px; }
+    
+    /* Ensure Giant Text Mask works on desktop */
+    .giant-text-mask { font-size: 25rem; margin-left: -20px; }
+}
+
+   /* =========================================
+   SERVICES HEADER ("The House of Plixo")
+   Mobile-First Default Styles
+   ========================================= */
+
+.services-header-box {
+    /* Mobile Spacing (Compact) */
+    padding: 50px 20px 30px 20px; 
+    text-align: center;
+    background-color: var(--ivory);
+}
+
+.house-title {
+    font-family: var(--font-deco);
+    
+    /* Mobile Font Size (Smaller default) */
+    font-size: 2rem; 
+    
+    color: var(--charcoal);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Decorative Underline */
+.house-title::after {
+    content: '';
+    display: block;
+    width: 50px; /* Slightly shorter line for mobile */
+    height: 2px;
+    background: var(--primary-accent);
+    margin: 10px auto 0 auto; /* Tighter spacing */
+}
+
+.services-section {
+    padding: 0; /* Full bleed, no padding */
+    background-color: var(--ivory);
+}
+
+.services-stack {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* --- THE BLOCK CONTAINER --- */
+.service-block {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Fixed height per card */
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255,255,255,0.2); /* Subtle separator */
+}
+
+/* --- 1. THUMBNAIL LAYER (Visible by Default) --- */
+.block-thumb {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    
+    /* Center the Border Box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+    z-index: 1;
+    transition: transform 0.5s ease;
+}
+
+/* Dark Tint Overlay on Thumbnail (So white text pops) */
+.block-thumb::before {
+    content: '';
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.3); 
+    z-index: -1;
+}
+
+/* --- THE WHITE CENTER RECTANGLE (50% Smaller) --- */
+.border-box {
+    border: 1px solid #fff;  /* Thinner border (was 2px) */
+    padding: 6px 12px;       /* Reduced padding (was 12px 25px) */
+    text-align: center;
+    transition: opacity 0.3s;
+    
+    /* Ensure it doesn't span full width */
+    display: inline-block; 
+    max-width: 80%;
+}
+
+.border-box h3 {
+    color: #fff;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    
+    /* Reduced Font Size (was 1.4rem) */
+    font-size: 0.9rem;       
+    
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1.2;
+}
+/* --- 2. OVERLAY LAYER (Hidden / Sliding) --- */
+.block-overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    
+    /* Start hidden at the bottom */
+    top: 100%; 
+    
+    /* Glass Effect Base */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+    /* Center Content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth Slide Up */
+}
+
+/* --- UNIQUE COLORS (Per your request) --- */
+/* Corporate Events (Teal) */
+.block-overlay.color-teal {
+    background: rgba(22, 62, 135, 0.92); 
+}
+
+/* Weddings (Rich Gold/Ochre) */
+.block-overlay.color-gold {
+    background: rgba(234, 11, 11, 0.784); 
+}
+
+/* Private Events (Deep Purple/Indigo) */
+.block-overlay.color-purple {
+    background: rgba(75, 0, 130, 0.92); 
+}
+
+
+/* --- OVERLAY CONTENT STYLING --- */
+.overlay-content {
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.overlay-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.overlay-content p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.9);
+}
+
+/* --- SMALL RECTANGLE BUTTON (50% Size) --- */
+.btn-rect.small-btn {
+    display: inline-block;
+    padding: 6px 15px;      /* Reduced from 12px 30px */
+    font-size: 0.75rem;     /* Smaller text */
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+    transition: background 0.3s;
+}
+
+.btn-rect.small-btn:hover {
+    background: #fff;
+    color: var(--charcoal);
+}
+
+/* --- ACTIVE STATE (Triggered by JS) --- */
+.service-block.active .block-overlay {
+    top: 0; /* Slide up to cover image */
+}
+
+/* Optional: Zoom background when active for effect */
+.service-block.active .block-thumb {
+    transform: scale(1.1);
+}
+
+/* =========================================
+   DESKTOP SERVICES (Horizontal Row)
+   ========================================= */
+@media screen and (min-width: 1024px) {
+
+    /* 1. Section Spacing */
+    .services-section {
+        padding-bottom: 80px; /* Add breathing room at bottom */
+    }
+
+    .services-header-box {
+        padding: 80px 0 60px 0; /* More space around the title */
+    }
+    
+    .house-title {
+        font-size: 3rem; /* Larger title for desktop impact */
+    }
+
+    /* 2. THE HORIZONTAL LAYOUT */
+    .services-stack {
+        /* Switch from Column (Mobile) to Row (Desktop) */
+        flex-direction: row; 
+        
+        /* 150px Padding Constraint */
+        padding: 0 150px; 
+        
+        /* Ensure container handles the width correctly */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 3. CARD ADJUSTMENTS */
+    .service-block {
+        /* Equal Width for all 3 cards */
+        flex: 1; 
+        
+        /* Taller Height for Desktop (Square/Rectangle look) */
+        height: 350px; 
+        
+        /* Remove the horizontal mobile lines */
+        border-bottom: none;
+        
+        /* Add vertical separators */
+        border-right: 1px solid rgba(255,255,255,0.3);
+    }
+
+    /* Remove border from the last card so it looks clean */
+    .service-block:last-child {
+        border-right: none;
+    }
+
+    /* 4. CONTENT SCALING (Make text readable on large screen) */
+    .border-box {
+        padding: 10px 25px; /* Restore padding */
+        max-width: 70%;
+    }
+
+    .border-box h3 {
+        font-size: 1.3rem; /* Larger title inside box */
+    }
+    
+    /* Overlay Text Adjustments */
+    .overlay-content h3 {
+        font-size: 2rem;
+    }
+    
+    .overlay-content p {
+        font-size: 1.1rem;
+        max-width: 80%; /* Keep text from hitting edges */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .btn-rect.small-btn {
+        font-size: 0.9rem;
+        padding: 10px 25px; /* Slightly larger button for mouse users */
+    }
+    
+    /* 5. HOVER INTERACTION (Optional for Desktop) */
+    /* Makes the slide-up happen on Hover instead of Click for desktop users */
+    .service-block:hover .block-overlay {
+        top: 0;
+    }
+    .service-block:hover .block-thumb {
+        transform: scale(1.1);
+    }
+}
+
+/* =========================================
+   4. HIGHLIGHTS SECTION (Mobile First)
+   ========================================= */
+
+.highlights-section {
+    background-color: var(--ivory);
+    padding-bottom: 50px;
+}
+
+/* --- MOBILE LAYOUT: 3 Squares in a Row --- */
+.gallery-container {
+    display: flex;
+    justify-content: center; /* Center the group */
+    gap: 15px; /* Space between squares */
+    padding: 0 10px;
+}
+
+/* The Link Wrapper */
+.gallery-item {
+    display: flex;
+    flex-direction: column; /* Stack Image top, Button bottom */
+    align-items: center;
+    text-decoration: none;
+    width: 30%; /* Fits 3 in a row (30% * 3 + gaps) */
+    max-width: 120px; /* Prevent them from getting too huge on tablets */
+}
+
+/* The Square Image Box */
+.gallery-img-box {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces a perfect square */
+    border-radius: 15px; /* Rounded Corners */
+    
+    /* Background Image Setup */
+    background-image: var(--thumb-bg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+/* Click Feedback on Mobile */
+.gallery-item:active .gallery-img-box {
+    transform: scale(0.95);
+}
+
+/* The Button (Below the image on Mobile) */
+.gallery-action-btn {
+    margin-top: 10px;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--charcoal);
+    border: 1px solid var(--charcoal);
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevents text wrap */
+    background: transparent;
+}
+
+/* Hide Desktop Label on Mobile */
+.desktop-label {
+    display: none;
+}
+
+
+/* =========================================
+   DESKTOP OVERRIDE (The "Wall" Layout)
+   ========================================= */
+@media screen and (min-width: 1024px) {
+
+    .gallery-container {
+        /* Switch to Horizontal Row */
+        padding: 0 150px;
+        gap: 0; /* Remove gaps for seamless wall */
+        width: 100%;
+    }
+
+    .gallery-item {
+        /* Expand to full panels */
+        width: auto;
+        flex: 1; /* Equal width columns */
+        height: 350px; /* Fixed Desktop Height */
+        max-width: none;
+        
+        /* Reset Flex */
+        display: block; 
+        position: relative;
+        
+        /* Vertical Dividers */
+        border-right: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    /* Remove last border */
+    .gallery-item:last-child {
+        border-right: none;
+    }
+
+    /* Transform the Square Box into a Full Panel */
+    .gallery-img-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 0; /* Remove rounded corners */
+        aspect-ratio: auto; /* Remove square constraint */
+        
+        /* Add Overlay Tint for text readability */
+        box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2); 
+    }
+
+    /* Transform the Button to Overlay Style */
+    .gallery-action-btn {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0;
+        
+        /* White Glassy Button Style */
+        color: white;
+        border: 1px solid white;
+        background: rgba(0,0,0,0.3);
+        backdrop-filter: blur(4px);
+        font-size: 0.9rem;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .gallery-item:hover .gallery-action-btn {
+        background: white;
+        color: var(--charcoal);
+    }
+
+    /* Show the Desktop Name Label (Top Center) */
+    .desktop-label {
+        display: block;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        color: white;
+        font-family: var(--font-deco);
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        pointer-events: none;
+    }
+}
+
+/* =========================================
+   5. CONTACT SECTION
+   ========================================= */
+
+.contact-section {
+    padding-bottom: 80px;
+    background-color: var(--ivory);
+}
+
+.contact-form-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* --- FORM LAYOUT --- */
+.plixo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- LOCATION GROUP STYLING --- */
+.location-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Logic to hide the input initially */
+.hidden-input {
+    display: none; /* Hidden by default */
+}
+
+/* Logic to show the input */
+.hidden-input.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Optional: Animation for smooth appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Adjustment: Stack them if screen is small */
+@media screen and (max-width: 768px) {
+    .location-group {
+        flex-direction: column;
+    }
+}
+
+/* Make rows stack on mobile */
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* --- INPUT FIELDS --- */
+.input-group {
+    width: 100%;
+    position: relative; /* For char count positioning if needed */
+}
+
+.plixo-form input,
+.plixo-form select,
+.plixo-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #f2f2f2; /* Light Grey Match */
+    border: none;
+    border-radius: 4px;
+    
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--charcoal); /* Text color */
+    
+    outline: none;
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+/* Placeholder Color */
+.plixo-form input::placeholder,
+.plixo-form textarea::placeholder {
+    color: #586e88; /* Blue-grey tone from image */
+    opacity: 0.8;
+}
+
+/* Focus State */
+.plixo-form input:focus,
+.plixo-form select:focus,
+.plixo-form textarea:focus {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px var(--primary-accent); /* Teal Focus Ring */
+}
+
+/* Dropdown Arrow Customization */
+.plixo-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230E5A5A%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.6s-1.9-9.1-5.4-12.6z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px top 50%;
+    background-size: 12px auto;
+}
+
+/* Character Counter Text */
+.char-count {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* --- SEND BUTTON --- */
+.form-btn-wrapper {
+    /* Optional: Center the small button */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-submit {
+    /* --- CAPSULE SHAPE --- */
+    border-radius: 50px; 
+    
+    /* --- SIZE REDUCTION (Shortened) --- */
+    width: auto;           /* Do not stretch full width */
+    min-width: unset;      /* Remove any minimum width locks */
+    padding: 10px 40px;    /* Compact padding */
+    
+    /* Maintain Theme Styles */
+    background-color: transparent;
+    border: 1px solid var(--primary-accent);
+    color: var(--charcoal);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-accent);
+    color: #fff;
+    /* Optional: Slight grow effect on hover */
+    transform: scale(1.05); 
+}
+@media screen and (min-width: 768px) {
+    .btn-submit {
+        width: auto; /* Desktop: Auto width */
+        min-width: 200px;
+    }
+}
+
+/* =========================================
+   6. FOOTER STYLING
+   ========================================= */
+
+.plixo-footer {
+    background-color: var(--primary-accent); /* Your Teal Brand Color */
+    color: #fff;
+    padding-top: 60px;
+    font-family: var(--font-body);
+}
+
+.plixo-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* --- TOP SECTION (Info Blocks) --- */
+.footer-top-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-info-block {
+    flex: 1;
+    min-width: 300px; /* Stacks on mobile */
+}
+
+.footer-heading {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.info-content {
+    margin-bottom: 15px;
+}
+
+.info-label {
+    color: #f2f2f2;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.info-link {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+}
+
+.info-link:hover {
+    opacity: 0.7;
+}
+
+.info-sub {
+    color: #f2f2f2;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.info-desc p {
+    color: #f2f2f2;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    max-width: 400px;
+}
+
+/* Divider Line */
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 40px;
+}
+
+/* --- MIDDLE SECTION (Links) --- */
+.footer-links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.col-heading {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #88c0c0; /* Lighter teal for subtitles */
+}
+
+.col-heading a {
+    color: #fff; /* "About Us" is a link */
+    text-decoration: none;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: padding-left 0.3s, color 0.3s;
+}
+
+.footer-list a:hover {
+    padding-left: 5px; /* Slight slide effect */
+    color: #fff;
+    opacity: 1;
+}
+
+/* Two Column List for Locations */
+.two-col-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.two-col-list li {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- COPYRIGHT BAR --- */
+.copyright-bar {
+    height: 20px;
+    background-color: rgb(255, 238, 238); /* Slightly darker strip */
+    text-align: center;
+    padding: 0;
+    font-size: 0.75rem;
+    color: rgb(255, 255, 255);
+}
+
+/* --- MOBILE ADJUSTMENTS --- */
+@media screen and (max-width: 768px) {
+    .border-top-mobile {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 30px;
+        margin-top: 10px;
+    }
+    
+    .footer-links-row {
+        flex-direction: column;
+        gap: 30px;
+
+    
+    }
+
+    .copyright-bar {
+            /* CHANGED: Allow text to wrap if it gets too tight */
+            white-space: normal !important; 
+            font-size: 0.65rem !important;
+            line-height: 1.2;
+            padding: 10px 5px !important;
+        }
+    }
+
+/* =========================================
+   MOBILE MENU COMPACT OVERRIDE
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. COMPACT CONTAINER */
+    .nav-menu {
+        /* Position it directly under the navbar */
+        position: absolute;
+        top: 70px; /* Adjust if your navbar height is different */
+        left: 0;
+        width: 100%;
+        
+        /* Remove default spacing */
+        height: auto !important; 
+        padding: 0 !important;
+        
+        /* Dark Background */
+        background-color: rgba(0, 0, 0, 0.95) !important;
+        
+        /* Optional: Add a bottom border */
+        border-bottom: 2px solid var(--primary-accent);
+    }
+
+    /* 2. COMPACT LINKS (Fit 5 items in ~120px) */
+    .nav-menu .nav-link {
+        /* Small Font */
+        font-size: 12px !important; 
+        
+        /* Minimal Vertical Spacing */
+        padding: 8px 0 !important; /* 8px top/bottom padding */
+        margin: 0 !important;
+        
+        /* Alignment */
+        display: block !important;
+        text-align: center;
+        width: 100%;
+        
+        /* Tighter Line Height */
+        line-height: 1 !important;
+        
+        /* Visual Separator */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        
+        /* Reset any transform from desktop */
+        transform: none !important;
+    }
+
+    /* Remove border from last item */
+    .nav-menu li:last-child .nav-link {
+        border-bottom: none;
+    }
+
+    /* 3. HOVER/ACTIVE STATE ON MOBILE */
+    .nav-menu .nav-link:hover,
+    .nav-menu .nav-link:active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff !important;
+        text-shadow: none !important;
+        transform: none !important;
+    }
+}
+
+/* =========================================
+   1. MOBILE FIRST (DEFAULT STYLES)
+   These styles apply to Mobile devices automatically.
+   ========================================= */
+
+/* The Gallery Container - Horizontal Scroller */
+#dynamic-gallery {
+    display: flex;
+    flex-wrap: nowrap;           /* Forces single row (Slider) */
+    overflow-x: auto;            /* Enables horizontal scrolling */
+    gap: 15px;                   /* Space between images */
+    padding: 20px 20px;          /* Added side padding so first image isn't glued to edge */
+    
+    /* Mobile Touch Optimization */
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; /* smooth momentum scroll on iOS */
+    
+    /* Hide Scrollbars (Clean Mobile Look) */
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE/Edge */
+}
+
+#dynamic-gallery::-webkit-scrollbar {
+    display: none;               /* Chrome/Safari */
+}
+
+/* Individual Slides (Mobile Sizing) */
+.gallery-slide {
+    /* Mobile Magic: 85% width lets the next image "peek" out, 
+       encouraging the user to swipe */
+    flex: 0 0 85%;               
+    height: 250px;               
+    
+    scroll-snap-align: center;   /* Snaps image to center of screen */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #f0f0f0;   /* Loading placeholder */
+    transition: transform 0.3s ease; /* Prepare for desktop hover effects */
+}
+
+/* Image Styling */
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;           /* Ensures image covers area perfectly */
+    display: block;
+}
+
+/* =========================================
+   2. DESKTOP ENHANCEMENTS (Min-Width: 768px)
+   These rules ONLY trigger on Tablets and Desktops.
+   ========================================= */
+@media (min-width: 768px) {
+    
+    #dynamic-gallery {
+        gap: 25px;               /* More breathing room on big screens */
+        padding: 40px 0;         /* More vertical spacing */
+        
+        /* Optional: Center the gallery wrapper if it doesn't fill screen */
+        justify-content: flex-start; 
+    }
+
+    .gallery-slide {
+        /* Desktop Sizing: Fixed width cards look cleaner on big monitors */
+        flex: 0 0 400px;         
+        height: 300px;           /* Taller images for desktop */
+        
+        /* Disable center snapping on desktop if you prefer free-scrolling */
+        scroll-snap-align: start; 
+    }
+
+    /* Desktop-Only Hover Effect (Mouse users love interaction) */
+    .gallery-slide:hover {
+        transform: translateY(-5px); /* Lift card up slightly on hover */
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+}
+
+script.js-
+script.js-
+document.addEventListener('DOMContentLoaded', () => {
+    
+/* -----------------------------------------------
+       1. Mobile Menu Toggle (Dynamic Height Sync)
+    ----------------------------------------------- */
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const hangingMenu = document.querySelector('.hanging-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function toggleMenu() {
+        // Toggle Classes
+        const isActive = navMenu.classList.toggle('active');
+        menuBtn.classList.toggle('open');
+        
+        // DYNAMIC SLIDE LOGIC
+        if (hangingMenu) {
+            if (isActive) {
+                // 1. Get the actual height of the open dropdown
+                // We assume max-height allows it to fully expand, so scrollHeight gives real height
+                const exactHeight = navMenu.scrollHeight;
+                
+                // 2. Move hanging menu down by that EXACT amount
+                hangingMenu.style.transform = `translateY(${exactHeight}px)`;
+            } else {
+                // 3. Reset to 0 when closed
+                hangingMenu.style.transform = 'translateY(0)';
+            }
+        }
+    }
+
+    function closeMenu() {
+        navMenu.classList.remove('active');
+        menuBtn.classList.remove('open');
+        
+        // Reset hanging menu
+        if (hangingMenu) {
+            hangingMenu.style.transform = 'translateY(0)';
+        }
+    }
+
+    // Event Listeners
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active')) {
+            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                closeMenu();
+            }
+        }
+    });
+
+    /* -----------------------------------------------
+       2. Scroll Animation (Intersection Observer)
+    ----------------------------------------------- */
+    const observerOptions = {
+        root: null, // use the viewport
+        threshold: 0.1, // trigger when 10% of element is visible
+        rootMargin: "0px"
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    // Target all elements with the fade class
+    const scrollElements = document.querySelectorAll('.fade-on-scroll');
+    scrollElements.forEach(el => scrollObserver.observe(el));
+
+});
+
+/* -----------------------------------------------
+       3. FAST SCROLL TO TOP (Logo Click)
+    ----------------------------------------------- */
+    const logoLink = document.querySelector('.logo-container');
+
+    logoLink.addEventListener('click', (e) => {
+        e.preventDefault(); // Stop the default instant jump
+        
+        const duration = 500; // Duration in milliseconds (0.5s = Very Fast)
+        const startY = window.scrollY;
+        const startTime = performance.now();
+
+        function scrollAnimation(currentTime) {
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+
+            // Easing function (easeOutQuad) for a natural but fast feel
+            // It starts fast and slows down slightly at the very end
+            const ease = 1 - (1 - progress) * (1 - progress);
+
+            window.scrollTo(0, startY * (1 - ease));
+
+            if (progress < 1) {
+                requestAnimationFrame(scrollAnimation);
+            }
+        }
+
+        requestAnimationFrame(scrollAnimation);
+    });
+
+    /* -----------------------------------------------
+       READ MORE / READ LESS LOGIC (Fixed)
+    ----------------------------------------------- */
+    const readMoreBtn = document.getElementById('read-more-btn');
+    const aboutWrapper = document.getElementById('about-wrapper');
+    const fadeOverlay = document.querySelector('.fade-overlay'); // Select the fade
+
+    if (readMoreBtn && aboutWrapper) {
+        readMoreBtn.addEventListener('click', () => {
+            
+            // Toggle the expanded class
+            const isExpanded = aboutWrapper.classList.toggle('expanded');
+            
+            if (isExpanded) {
+                // EXPAND
+                aboutWrapper.classList.remove('collapsed');
+                readMoreBtn.textContent = "Read Less";
+                
+                // Hide Fade
+                if(fadeOverlay) fadeOverlay.style.opacity = '0';
+                
+            } else {
+                // COLLAPSE
+                aboutWrapper.classList.add('collapsed');
+                readMoreBtn.textContent = "Read More";
+                
+                // Show Fade
+                if(fadeOverlay) fadeOverlay.style.opacity = '1';
+                
+                // Smooth scroll back to top of section so user isn't lost
+                document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    /* -----------------------------------------------
+       4. HANGING MENU HOME BUTTON (Fast Scroll)
+    ----------------------------------------------- */
+    // Select the specific home button inside the hanging menu
+    const menuHomeBtn = document.querySelector('.hanging-menu a[href="#home"]');
+
+    if (menuHomeBtn) {
+        menuHomeBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Stop default jump
+            
+            const duration = 500; // 0.5 seconds (Very Fast)
+            const startY = window.scrollY;
+            const startTime = performance.now();
+
+            function scrollAnimation(currentTime) {
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                
+                // Natural easing
+                const ease = 1 - (1 - progress) * (1 - progress);
+
+                window.scrollTo(0, startY * (1 - ease));
+
+                if (progress < 1) {
+                    requestAnimationFrame(scrollAnimation);
+                }
+            }
+
+            requestAnimationFrame(scrollAnimation);
+        });
+    }
+
+    /* -----------------------------------------------
+   SERVICE BLOCKS (Slide Up Logic)
+----------------------------------------------- */
+function toggleBlock(clickedBlock) {
+    // 1. Get all blocks
+    const allBlocks = document.querySelectorAll('.service-block');
+    
+    // 2. Check if this one is already active
+    const isActive = clickedBlock.classList.contains('active');
+    
+    // 3. Reset ALL blocks (Close any open ones)
+    allBlocks.forEach(block => {
+        block.classList.remove('active');
+    });
+    
+    // 4. If it wasn't active before, make it active now
+    if (!isActive) {
+        clickedBlock.classList.add('active');
+    }
+}
+
+/* -----------------------------------------------
+   HIGHLIGHTS SECTION: Fetch & Display
+----------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const highlightGrid = document.getElementById('highlights-grid');
+
+    if (highlightGrid) {
+        fetch('gallery.json')
+            .then(response => response.json())
+            .then(data => {
+                // Take first 3 items
+                const highlights = data.slice(0, 3);
+                
+                highlights.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'highlight-card';
+                    card.onclick = () => window.location.href = 'gallery.html';
+
+                    // New Structure: Image + Frame + Info
+                    card.innerHTML = `
+                        <img src="${item.src}" alt="${item.alt}" loading="lazy">
+                        
+                        <div class="highlight-frame"></div>
+                        
+                        <div class="highlight-info">
+                            <span class="highlight-category">${item.category}</span>
+                            <h3 class="highlight-title">${item.alt}</h3>
+                        </div>
+                    `;
+                    
+                    highlightGrid.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error loading gallery highlights:', error));
+    }
+});
+
+/* -----------------------------------------------
+   CONTACT FORM: Location "Others" Toggle
+----------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const locationSelect = document.getElementById('location-select');
+    const otherInput = document.getElementById('other-location-input');
+
+    if (locationSelect && otherInput) {
+        locationSelect.addEventListener('change', function() {
+            if (this.value === 'Others') {
+                // Show the text box
+                otherInput.classList.add('show');
+                // Make it mandatory
+                otherInput.setAttribute('required', 'true');
+                // Focus on it automatically for better UX
+                otherInput.focus();
+            } else {
+                // Hide the text box
+                otherInput.classList.remove('show');
+                // Remove mandatory requirement
+                otherInput.removeAttribute('required');
+                // Clear any text the user typed
+                otherInput.value = '';
+            }
+        });
+    }
+});
+
+/* -----------------------------------------------
+   CONTACT FORM: Character Counter
+----------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const messageInput = document.querySelector('textarea[name="message"]');
+    const charCountDisplay = document.querySelector('.char-count');
+
+    if (messageInput && charCountDisplay) {
+        messageInput.addEventListener('input', () => {
+            const currentLength = messageInput.value.length;
+            const minLength = 150;
+            
+            // Update Text
+            charCountDisplay.textContent = `${currentLength} / ${minLength} characters`;
+            
+            // Visual Feedback (Red if too short, Green if good)
+            if (currentLength < minLength) {
+                charCountDisplay.style.color = 'red';
+            } else {
+                charCountDisplay.style.color = 'green';
+            }
+        });
+    }
+});
+
+/* -----------------------------------------------
+   SMOOTH SCROLLING (JS Implementation)
+----------------------------------------------- */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        // 1. Prevent the default instant jump
+        e.preventDefault();
+
+        // 2. Get the target section ID (e.g., #contact)
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        // 3. Smooth scroll to it
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+            // 4. (Optional) Close Mobile Menu if open
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+        }
+    });
+});

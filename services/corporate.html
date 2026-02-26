@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Events — PLIXOEVENTS</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="corporate.css">
+</head>
+
+<body>
+
+  <header class="main-header">
+        <div class="nav-container">
+            <a href="../index.html#home" class="logo-link">
+                <img src="../images/plixo-final(copy).png" alt="Plixo Events" class="logo-img">
+            </a>
+      
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About Us</a>
+        <a href="../index.html#services" class="active">Services</a>
+        <a href="../index.html#contact" class="contact-btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="corporate-hero-wrapper">
+    
+    <div class="hero-text-side">
+      <h1>Corporate Event Planning</h1>
+      <p class="hero-tagline">Precision. Impact. <br> Brand Alignment.</p>
+      <a href="#projects" class="hero-cta">View Case Studies</a>
+    </div>
+
+    <div class="hero-slideshow-side">
+      <div class="slideshow-window">
+          <div class="slideshow-container" id="corporateSlideshow" data-id="corporate">
+            </div>
+      </div>
+      
+      <button class="slide-btn prev" aria-label="Previous Slide">&#10094;</button>
+      <button class="slide-btn next" aria-label="Next Slide">&#10095;</button>
+      
+      <div class="slideshow-caption">
+          <h3>Our Corporate Portfolio</h3>
+          <p>Highlights from recent summits and launches</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="details-section">
+    <div class="details-grid">
+      
+      <div class="detail-box approach-box">
+        <div class="icon-wrap">🎯</div>
+        <h2>Our Approach</h2>
+        <p>
+          We manage corporate events from strategic planning through on-ground execution.
+          Every element — from vendor coordination to guest experience — is designed to reflect your brand clarity, operational discipline, and strategic intent.
+        </p>
+      </div>
+
+      <div class="detail-box deliver-box">
+        <div class="icon-wrap">📋</div>
+        <h2>What We Deliver</h2>
+        <ul class="deliverables-list">
+          <li>Conferences & Summits</li>
+          <li>Product Launches</li>
+          <li>Leadership Offsites</li>
+          <li>Brand Activations</li>
+          <li>Exhibitions & Trade Shows</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <div class="line"></div>
+    </div>
+    
+    <div class="work-grid">
+      
+      <div class="work-card">
+        <div class="work-image" style="background-image: url('../images/corp/corp-1.jpg');"></div>
+        <div class="work-content">
+          <h3>Leadership Summit</h3>
+          <span class="location">Gurugram</span>
+          <p>A closed-door executive summit featuring stage design, AV production, and high-security logistics.</p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-image" style="background-image: url('../images/corp/corp-2.jpg');"></div>
+        <div class="work-content">
+          <h3>Product Launch</h3>
+          <span class="location">Mumbai</span>
+          <p>End-to-end execution including media coordination, experiential zones, and live demonstrations.</p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-image" style="background-image: url('../images/corp/corp-3.jpg');"></div>
+        <div class="work-content">
+          <h3>Annual Conference</h3>
+          <span class="location">Bangalore</span>
+          <p>Multi-session conference with keynote speakers, breakout rooms, and hybrid digital support.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Let's Build Your Next Event</h2>
+      <p>Ready to create an experience that moves your business forward?</p>
+      <a href="../index.html#contact" class="btn-primary">Get a Free Event Plan</a>
+    </div>
+  </section>
+
+  <div class="floating-socials">
+      <a href="https://wa.me/919355063737" target="_blank" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      
+      <a href="https://www.instagram.com/plixo_events/" target="_blank" class="float-btn instagram" aria-label="Visit Instagram">
+          <i class="fa-brands fa-instagram"></i>
+      </a>
+      
+      <a href="mailto:plixoevents@gmail.com" class="float-btn gmail" aria-label="Email Us">
+          <i class="fa-solid fa-envelope"></i>
+      </a>
+  </div>
+
+  <script src="corporate.js"></script>
+  <script src="/slideshow.js"></script>
+</body>
+</html>

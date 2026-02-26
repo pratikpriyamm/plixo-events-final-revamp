@@ -1,0 +1,39 @@
+[
+  {
+    "id": "corporate",
+    "category": "corporate",
+    "title": "Business Elite",
+    "images": [
+      "/gallery/corporate/corp-1.jpg",
+      "/gallery/corporate/corp-2.jpg",
+      "/gallery/corporate/corp-3.jpg",
+      "/gallery/corporate/corp-4.jpg",
+      "/gallery/corporate/corp-5.jpg"
+    ]
+  },
+
+  {
+    "id": "wedding",
+    "category": "wedding",
+    "title": "Royal Unions",
+    "images": [
+      "/gallery/wedding/wed-1.jpg",
+      "/gallery/wedding/wed-2.jpg",
+      "/gallery/wedding/wed-3.jpg",
+      "/gallery/wedding/wed-4.jpg",
+      "/gallery/wedding/wed-5.jpg",
+      "/gallery/wedding/wed-6.jpg"
+    ]
+  },
+
+  {
+    "id": "social",
+    "category": "social",
+    "title": "Galas & Parties",
+    "images": [
+      "/gallery/social/soc-1.jpg",
+      "/gallery/social/soc-2.jpg",
+      "/gallery/social/soc-3.jpg"
+    ]
+  }
+]

@@ -1,0 +1,971 @@
+/* =========================================
+   1. RESET & VARIABLES
+   ========================================= */
+:root {
+    --teal-primary: #0E5A5A;  /* Main Brand Color */
+    --teal-dark: #073838;     /* Hover State */
+    --teal-gradient: linear-gradient(180deg, #094545 0%, #042929 100%);
+    
+    --white: #FFFFFF;
+    --off-white: #FAF9F6;
+    --text-dark: #2B2B2B;
+    --text-muted: #555555;
+    
+    --font-heading: 'DM Serif Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --container-padding: 20px;
+    --max-width: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+img { max-width: 100%; display: block; }
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.text-center { text-align: center; }
+.text-white { color: var(--white); }
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-teal {
+    background-color: var(--teal-primary);
+    color: var(--white);
+    border: 1px solid var(--teal-primary);
+}
+.btn-teal:hover { background-color: var(--teal-dark); }
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+.btn-outline:hover { background-color: var(--white); color: var(--teal-primary); }
+
+
+/* =========================================
+   2. NAVIGATION (Mobile Layout)
+   ========================================= */
+.navbar {
+    background-color: var(--teal-primary);
+    height: 70px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--teal-primary);
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link { 
+    display: flex; 
+    align-items: center; 
+    height: 70px; /* Forces the link box to perfectly match the 70px navbar */
+    /* margin-left: -100px; */
+}
+
+.logo-img {
+    height: 100%; /* Stretches the image to fill the exact 70px height */
+    width: auto;  /* Keeps your logo perfectly proportioned so it doesn't squish */
+    object-fit: contain; 
+    display: block; /* Removes the invisible gap browsers put under inline images */
+}
+
+/* Mobile Hamburger */
+/* --- Hamburger Button --- */
+.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center lines vertically */
+    gap: 6px; /* Spacing between lines */
+    z-index: 1001; /* Ensure it sits above the sliding menu */
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+.line {
+    width: 100%;
+    height: 2px; /* Slightly thinner for elegance */
+    background-color: var(--text-dark);
+    transition: all 0.3s ease-in-out; /* Smooth animation */
+    transform-origin: center;
+}
+
+/* --- The "X" Animation State --- */
+.nav-toggle.open .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Move down & rotate */
+}
+
+.nav-toggle.open .line:nth-child(2) {
+    opacity: 0; /* Hide middle line */
+    transform: translateX(-10px); /* Slight slide effect */
+}
+
+.nav-toggle.open .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Move up & rotate */
+}
+
+/* =========================================
+   ELEGANT MOBILE OVERLAY (Plixo Theme)
+   ========================================= */
+@media (max-width: 1023px) {
+    
+    .nav-menu {
+        /* 1. Full Screen Overlay */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        
+        /* 2. Brand Colors: Clean White with a hint of depth */
+        background-color: rgba(255, 255, 255, 0.98); 
+        
+        /* 3. Center Everything */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        
+        /* 4. Remove Borders & Shadows */
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        
+        /* 5. Elegant Fade Animation */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+    }
+
+    /* Shown State */
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* 6. Typography: Upscale & Spaced */
+    .nav-link {
+        display: inline-block;
+        padding: 15px 0;
+        font-size: 1.5rem; /* Larger for luxury feel */
+        /* Deep Forest Green from your logo */
+        color: #1b3933; 
+        text-align: center;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 4px; /* Essential for the "Event Management" look */
+        
+        /* Remove the black separator lines */
+        border-bottom: none !important;
+        
+        transition: all 0.3s ease;
+    }
+
+    /* Subtle Hover/Active State */
+    .nav-link:active {
+        background-color: transparent;
+        color: #d4af37; /* A soft gold accent on click */
+        transform: scale(1.05);
+    }
+
+    /* Ensure the list items have no extra spacing */
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+
+/* =========================================
+   ABOUT LABEL (Minimal & Elegant)
+   ========================================= */
+
+/* 1. Wrapper Layout */
+.about-image-wrapper {
+    display: flex;
+    flex-direction: column; /* Stacks label on top of image */
+    gap: 15px;              /* Space between label and image */
+    position: relative;
+}
+
+/* 2. The Label Container */
+.creative-label {
+    display: flex;
+    align-items: center;    /* Vertically centers line with text */
+    gap: 15px;              /* Space between line and text */
+    padding-left: 5px;      /* Slight indent for elegance */
+}
+
+/* 3. The Decorative Line */
+.label-line {
+    width: 40px;            /* Initial length */
+    height: 1px;            /* Very thin, elegant line */
+    background-color: var(--teal-primary); 
+    opacity: 0.7;
+    transition: width 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth expansion */
+}
+
+/* 4. The Text */
+.label-text {
+    font-family: var(--font-body);
+    font-size: 0.75rem;     /* Small, editorial size */
+    text-transform: uppercase;
+    letter-spacing: 3px;    /* Wide spacing = Premium look */
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* 5. Subtle Interaction */
+/* When hovering anywhere on the image wrapper, extend the line */
+.about-image-wrapper:hover .label-line {
+    width: 80px;            /* Line grows longer */
+    background-color: var(--text-dark); /* Line gets slightly darker */
+}
+
+/* =========================================
+   3. HERO SECTION (CORRECTED)
+   ========================================= */
+.hero-section {
+    position: relative;
+    height: 90vh; 
+    
+    /* 1. Base color (Dark background for opacity to work against) */
+    background-color: #000000; 
+    
+    /* 2. Flexbox to center content */
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+    
+    /* IMPORTANT: Do NOT put background-image here! */
+}
+
+/* 3. The Image Layer (Mobile Default) */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    
+    /* Mobile Image */
+    background-image: url('images/hero-bgs/hero-mob.jpg'); 
+    
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Opacity Control */
+    opacity: 0.6; 
+    
+    z-index: 0; 
+}
+
+/* 4. The Content Layer */
+.hero-content-wrapper {
+    position: relative; 
+    z-index: 2; /* Sits ON TOP of the image */
+    padding: 0 var(--container-padding);
+    color: var(--white);
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 400px;
+}
+
+.hero-btn-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons on mobile */
+    gap: 15px;
+}
+
+/* =========================================
+   4. ABOUT SECTION
+   ========================================= */
+.about-section { padding: 60px 0; background: var(--white); }
+
+.about-grid {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    gap: 30px;
+}
+
+.about-img {
+    width: 100%;
+    border-radius: 4px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.about-text-wrapper .section-title {
+    color: var(--teal-primary);
+    font-size: 1.8rem;
+}
+
+.about-desc p { margin-bottom: 15px; color: var(--text-muted); }
+
+
+/* =========================================
+   5. SERVICES SECTION
+   ========================================= */
+.services-section {
+    padding: 80px 0;
+    background: var(--teal-gradient); /* The Teal Background from Ref */
+}
+
+.services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 4px;
+    overflow: hidden; /* CRITICAL: Hides the text when it's off-screen */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block;
+    height: 100%; 
+    
+    position: relative; /* ADDED: Crucial so the overlay stays inside the card */
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 25px;
+    text-align: center;
+}
+
+/* Default Visible Content (Title) */
+.card-content h3 {
+    margin-bottom: 0; /* CHANGED: Removed bottom margin so it sits perfectly centered */
+    color: var(--teal-primary);
+    font-size: 1.4rem;
+}
+
+/* --- THE SLIDING OVERLAY (The Descriptive Text) --- */
+.card-content p {
+    position: absolute; /* Takes text out of normal layout flow */
+    top: 0;
+    left: -100%; /* Starts hidden off the left edge */
+    width: 100%;
+    height: 100%; /* Covers the entire card (image + title) */
+    
+    /* Overlay Styling */
+    background: rgba(7, 56, 56, 0.95); /* Dark teal semi-transparent background */
+    color: var(--white); /* White text for readability */
+    margin: 0;
+    padding: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    
+    /* Centers the text beautifully inside the overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* The Slide Animation */
+    transition: left 0.4s ease-in-out;
+    z-index: 10;
+}
+
+/* --- THE TRIGGER (Tap on Mobile, Hover on Desktop) --- */
+.service-card:hover .card-content p,
+.service-card:active .card-content p {
+    left: 0; /* Slides the text perfectly into view */
+}
+
+/* =========================================
+   6. WHY CHOOSE PLIXO (Features)
+   ========================================= */
+
+.features-section { 
+    padding: 40px 0; /* Reduced vertical padding */
+    background: var(--white); 
+}
+
+/* --- MOBILE (Squeeze into one line) --- */
+.features-grid {
+    display: flex;
+    flex-wrap: nowrap;        /* FORCE single line (no wrapping) */
+    justify-content: space-between; /* Distribute evenly */
+    gap: 5px;                 /* Very small gap to save space */
+    margin-top: 20px;
+}
+
+.feature-item {
+    flex: 1;                  /* All items take equal width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 0;             /* Allows text to shrink below implicit width */
+}
+
+/* Shrink Icons for Mobile */
+.icon-circle {
+    width: 35px;              /* Reduced from 50px */
+    height: 35px;             /* Reduced from 50px */
+    background-color: var(--teal-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;       /* Reduced spacing */
+    color: var(--white);
+    font-size: 1rem;          /* Smaller icon symbol */
+    transition: transform 0.3s;
+}
+
+/* Shrink Text for Mobile */
+.feature-item h3 { 
+    font-size: 0.65rem;       /* Very small text (approx 10-11px) */
+    color: var(--teal-primary); 
+    font-family: var(--font-body); 
+    font-weight: 600; 
+    line-height: 1.2;         /* Tight line height for wrapped text */
+    word-wrap: break-word;    /* Ensures long words don't overflow */
+}
+
+.feature-item:hover .icon-circle { transform: scale(1.1); }
+
+/* =========================================
+   6. HIGHLIGHTS (Exact 16:9 and 9:16 Ratios)
+   ========================================= */
+
+.highlights-section {
+    padding: 60px 0;
+    background-color: #073838; 
+}
+
+/* --- MASONRY LAYOUT CONTAINER --- */
+.gallery-collage {
+    column-count: 2;
+    column-gap: 0;  /* No gap between columns */
+    width: 100%;
+}
+
+/* --- THE IMAGE ITEM --- */
+.collage-item {
+    position: relative;
+    display: block; 
+    width: 100%;
+    overflow: hidden;
+    margin: 0;      /* No gap between rows */
+    
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+}
+
+/* --- EXACT ASPECT RATIOS --- */
+
+/* 1. Top Left (Corporate) - Standard 4:3 */
+.collage-item:nth-child(1) {
+    aspect-ratio: 3 / 4;
+    height: auto; /* Resets any old fixed heights */
+}
+
+/* 2. Bottom Left (Weddings) - Widescreen 16:9 */
+.collage-item:nth-child(2) {
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+/* 3. Top Right (Private) - Widescreen 16:9 */
+.collage-item:nth-child(3) {
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+/* 4. Bottom Right (Events) - Standard 4:3 */
+.collage-item:nth-child(4) {
+    aspect-ratio: 3 / 4;
+    height: auto;
+}
+
+/* --- IMAGE STYLING --- */
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: brightness(0.85);
+    display: block; 
+}
+
+/* --- SILVER TEXT OVERLAY --- */
+.hover-label {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.55); /* Silver Watermark */
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* --- HOVER EFFECTS --- */
+.collage-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(1);
+}
+
+/* =========================================
+   7. CONTACT SECTION (Mobile First)
+   ========================================= */
+
+.contact-section {
+    padding: 60px 0;
+    background-color: var(--white); /* White background */
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.contact-title {
+    color: var(--teal-primary); /* Dark Teal heading */
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: left; /* Aligns left like your reference image */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column; /* Stacks them on mobile */
+    gap: 15px;              /* Adds the missing space between them */
+    width: 100%;
+}
+
+/* --- Input Styling --- */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    background-color: #f4f7f7; /* Very light grey with a hint of teal */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #6c8a8a; /* Teal-tinted grey placeholder */
+}
+
+/* Hover & Focus states */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--teal-primary);
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(14, 90, 90, 0.1);
+}
+
+/* --- Validation Text --- */
+.char-count-msg {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #d9534f; /* Red when incomplete */
+    transition: color 0.3s;
+}
+
+.char-count-msg.valid {
+    color: #28a745; /* Green when 150+ chars are reached */
+}
+
+/* --- Submit Button --- */
+.btn-submit {
+    align-self: flex-start; /* Aligns button to the left */
+    padding: 12px 45px;
+    background-color: transparent;
+    color: var(--teal-primary);
+    border: 1px solid var(--teal-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--teal-primary);
+    color: #ffffff;
+}
+
+
+/* =========================================
+   8. FOOTER
+   ========================================= */
+.main-footer {
+    background-color: var(--white);
+    padding: 60px 0 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+    gap: 40px 20px;
+}
+
+.footer-col h4 {
+    color: var(--teal-primary);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { font-size: 0.9rem; color: var(--text-muted); }
+.footer-col ul li a:hover { color: var(--teal-primary); }
+
+.social-icons { display: flex; gap: 15px; margin-top: 10px; }
+.social-icons a { font-size: 1.2rem; }
+
+.footer-bottom {
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* =========================================
+   8. FLOATING SOCIAL BUTTONS (Icons Only)
+   ========================================= */
+
+/* --- Container Positioning (Stays the same) --- */
+.floating-socials {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: -5px;          /* Slightly more space between icons */
+    z-index: 9999;
+}
+
+/* --- Base Icon Styling (Mobile First) --- */
+.float-btn {
+    /* Removed width, height, background, radius, and box-shadow */
+    
+    font-size: 1.8rem;  /* Make icons larger since they have no background */
+    text-decoration: none;
+    display: inline-block; /* Needed for transform animations */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    
+    /* Add a small padding buffer for easier tapping */
+    padding: -5px; 
+}
+
+/* --- Official Brand Colors Applied to Text --- */
+
+/* WhatsApp - Solid Green */
+.float-btn.whatsapp {
+    color: #25D366; 
+}
+
+/* Instagram - Gradient Text Clip trick */
+.float-btn.instagram {
+    /* Fallback color for older browsers */
+    color: #d6249f; 
+    
+    /* The Gradient */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    
+    /* Clip background to the text shape and make text transparent */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Gmail - Solid Red */
+.float-btn.gmail {
+    color: #EA4335; 
+}
+
+/* --- Hover / Tap Effects --- */
+.float-btn:hover,
+.float-btn:active {
+    transform: translateY(-5px) scale(1.1); /* Pop up and grow slightly */
+    
+    /* A subtle drop-shadow glow instead of a box-shadow */
+    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.25));
+}
+
+/* =========================================
+   9. DESKTOP ENHANCEMENTS (min-width: 1024px)
+   ========================================= */
+@media (min-width: 1024px) 
+{
+
+    /* --- NAVBAR --- */
+    .navbar { height: 90px; }
+    
+    .nav-toggle { display: none; } /* Hide Hamburger */
+    
+    .nav-menu {
+        color: var(--off-white);
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        width: auto;
+        padding: 0;
+        gap: 30px;
+    }
+
+.logo-link { 
+    display: flex; 
+    align-items: center; 
+    height: 90px; /* Forces the link box to perfectly match the 70px navbar */
+    margin-left: -100px;
+}
+
+.logo-img {
+    height: 100%; /* Stretches the image to fill the exact 70px height */
+    width: auto;  /* Keeps your logo perfectly proportioned so it doesn't squish */
+    object-fit: contain; 
+    display: block; /* Removes the invisible gap browsers put under inline images */
+}
+
+    .nav-link { font-size: 1rem; position: relative; }
+    
+    /* Hover Underline Effect */
+    .nav-link::after {
+        content: ''; position: absolute; bottom: -5px; left: 0;
+        width: 0; height: 2px; background: var(--off-white);
+        transition: 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .desktop-only {
+        display: inline-block;
+        background-color: var(--white);
+        color: black;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    .desktop-only:hover { background-color: var(--teal-dark); }
+
+
+    /* --- HERO --- */
+    .hero-section::before {
+        /* This now correctly targets the ::before layer defined above */
+        background-image: url('images/hero-bgs/hero-desktop.jpg') !important; 
+        
+        background-position: center 20% !important;
+    }
+    .hero-content-wrapper { padding-left: 1; }
+    .hero-title { font-size: 4rem; margin-bottom: 25px; }
+    .hero-subtitle { font-size: 1.2rem; max-width: 500px; }
+    .hero-btn-group { flex-direction: row; }
+
+
+    /* --- ABOUT --- */
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 60px;
+    }
+    .about-img { height: 500px; }
+    .about-text-wrapper .section-title { font-size: 2.5rem; }
+
+
+    /* --- SERVICES --- */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+        gap: 30px;
+    }
+    .service-card { transition: transform 0.3s; }
+    
+    /* Card lifts up on hover */
+    .service-card:hover { transform: translateY(-10px); }
+    
+    /* --- FEATURES --- */
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 Columns Grid */
+        gap: 30px; /* Restore comfortable gap */
+    }
+
+    /* Restore Icon Size */
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Restore Text Size */
+    .feature-item h3 {
+        font-size: 1.1rem;
+    }
+
+.gallery-collage {
+        max-width: 1100px; /* Constrains width so it doesn't overflow */
+        margin: 0 auto;    /* Centers the gallery */
+    }
+
+    /* Notice we do NOT need to set fixed heights here anymore! 
+       Because we used 'aspect-ratio', the browser will automatically 
+       scale the heights up proportionately based on the 1100px width.
+    */
+    
+    .hover-label {
+        font-size: 1.5rem; /* Larger text for desktop */
+        letter-spacing: 4px;
+    }
+
+/* =========================================
+   DESKTOP ENHANCEMENTS (contact Us)
+   ========================================= */
+
+    .contact-section {
+        padding: 100px 0;
+    }
+
+    .contact-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    /* Puts Phone and Location perfectly side-by-side */
+    .form-row {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .half-width {
+        flex: 1;
+    }
+    
+    /*=======================================
+    Social buttons
+    ========================================*/
+
+    .floating-socials {
+        bottom: 30px;
+        right: 30px;
+        gap: 5px;
+    }
+
+    .float-btn {
+        font-size: 2.15rem; /* Even larger on desktop */
+    }
+
+    /* --- FOOTER --- */
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 Columns */
+    }
+}

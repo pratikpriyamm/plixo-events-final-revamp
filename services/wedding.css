@@ -1,0 +1,506 @@
+/* =========================================
+   VARIABLES & RESET (Wedding Teal Theme)
+   ========================================= */
+:root {
+  --primary-teal: #073838;  /* Deep Teal */
+  --accent-teal: #0E5A5A;    /* Medium Teal / Turquoise */
+  --bg-light: #f4fffd;       /* Ghost White / Light Teal Tint */
+  --text-dark: #1A1A2E;      /* Dark Navy/Black */
+  --text-light: #666666;
+  --white: #ffffff;
+  
+  --font-heading: 'DM Serif Display', serif; /* Elegant Serif */
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.7;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* =========================================
+   HEADER (Mobile Base)
+   ========================================= */
+.main-header {
+  padding: 15px 20px;
+  background: #0E5A5A;
+  border-bottom: 1px solid #0E5A5A;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0;
+  overflow: visible;   /* 🔥 CRITICAL */
+  position: relative;
+}
+
+.logo-link { 
+    display: flex; 
+    align-items: center; 
+    height: 60px; /* Forces the link box to perfectly match the 70px navbar */
+    /* margin-left: -100px; */
+}
+
+.logo-img {
+    height: 100%; /* Stretches the image to fill the exact 70px height */
+    width: auto;  /* Keeps your logo perfectly proportioned so it doesn't squish */
+    object-fit: contain; 
+    display: block; /* Removes the invisible gap browsers put under inline images */
+}
+
+/* --- Mobile Menu --- */
+/* MOBILE DROPDOWN - FULL SCREEN */
+.nav-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+
+  display: flex;                 /* keep flex always */
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* Active state */
+.nav-links.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-links a {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links.active a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-links.active a:nth-child(1) { transition-delay: 0.05s; }
+.nav-links.active a:nth-child(2) { transition-delay: 0.1s; }
+.nav-links.active a:nth-child(3) { transition-delay: 0.15s; }
+.nav-links.active a:nth-child(4) { transition-delay: 0.2s; }
+
+.contact-btn { 
+  color: var(--primary-teal) !important; 
+  font-weight: 700 !important; 
+}
+
+/* =========================================
+   HAMBURGER ICON & "X" ANIMATION
+   ========================================= */
+.menu-toggle {
+  display: flex; 
+  flex-direction: column; 
+  gap: 5px;
+  background: none; 
+  border: none; 
+  cursor: pointer;
+}
+
+.menu-toggle .bar { 
+  width: 25px; 
+  height: 3px; 
+  background: var(--text-dark); 
+  transition: all 0.3s ease-in-out; 
+}
+
+/* The "X" Animation States */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg); 
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0; 
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg); 
+}
+
+
+/* =========================================
+   HERO SECTION (Mobile Base)
+   ========================================= */
+.wedding-hero-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text-side {
+  padding: 60px 25px;
+  background: var(--bg-light);
+  text-align: center;
+}
+
+.hero-text-side h1 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: var(--primary-teal);
+}
+
+.separator-gold {
+  width: 50px;
+  height: 2px;
+  background: var(--primary-teal); 
+  margin: 0 auto 20px;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 12px 35px;
+  border: 1px solid var(--primary-teal);
+  color: var(--primary-teal);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+/* Hero Slideshow Side */
+.hero-slideshow-side {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: #000;
+  overflow: hidden;
+}
+
+.slideshow-window {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fade {
+  animation: fadeAnim 1.5s;
+}
+
+@keyframes fadeAnim {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: var(--white);
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.7;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.slideshow-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(7, 56, 56, 0.9), transparent);
+  color: var(--white);
+  padding: 20px;
+  text-align: left;
+}
+.slideshow-caption h3 { font-size: 1.5rem; margin-bottom: 2px; font-family: var(--font-heading); }
+.slideshow-caption p { font-size: 0.8rem; opacity: 0.8; }
+
+/* =========================================
+   DETAILS SECTION (Mobile Base)
+   ========================================= */
+.details-section {
+  padding: 60px 20px;
+  background: var(--white);
+}
+
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.detail-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.icon-decorative {
+  font-size: 2rem;
+  color: var(--accent-teal);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.detail-box h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-teal);
+}
+
+.deliverables-list {
+  list-style: none;
+  text-align: left;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.deliverables-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+}
+.deliverables-list li::before {
+  content: "❧";
+  margin-right: 10px;
+  color: var(--accent-teal);
+}
+
+/* =========================================
+   PROJECTS SECTION (Mobile Base)
+   ========================================= */
+.projects-section {
+  padding: 60px 20px;
+  background: var(--bg-light);
+}
+
+.section-header { text-align: center; margin-bottom: 40px; }
+.section-header h2 { font-family: var(--font-heading); font-size: 2.2rem; color: var(--primary-teal); }
+.section-sub { font-style: italic; color: var(--accent-teal); }
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.work-card {
+  background: var(--white);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+  transition: transform 0.4s ease;
+  overflow: hidden;
+}
+
+.work-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.work-content { padding: 30px; text-align: center; }
+.work-content h3 { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 5px; color: var(--primary-teal); }
+.location { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-teal); margin-bottom: 15px; }
+
+/* =========================================
+   CTA SECTION
+   ========================================= */
+.cta-section {
+  padding: 80px 20px;
+  background: var(--primary-teal);
+  color: var(--white);
+  text-align: center;
+}
+
+.cta-content h2 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 10px; color: var(--white); }
+.cta-content p { opacity: 0.9; margin-bottom: 30px; }
+
+.btn-primary {
+  display: inline-block;
+  padding: 15px 50px;
+  background: var(--white);
+  color: var(--primary-teal);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* =========================================
+   DESKTOP ENHANCEMENTS (@media)
+   ========================================= */
+@media screen and (min-width: 1024px) {
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Aligns everything to the left */
+    align-items: center;
+    gap: 50px; /* Space between the logo and the start of the links */
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px; /* Adjust based on your header height */
+  }
+
+  /* 2. Hide the hamburger button on desktop */
+  .menu-toggle { 
+    display: none !important; 
+  }
+
+  /* 3. Reset the mobile menu into a horizontal row */
+  .nav-links {
+    white-space: nowrap;
+    position: static;      /* Removes absolute/fixed positioning */
+    display: flex;
+    flex-direction: row;   /* Horizontal layout */
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    gap: 35px;             /* Space between individual links */
+    opacity: 1;            /* Ensure visible */
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    width: auto;
+    height: auto;
+  }
+
+  /* 4. Style the links for desktop */
+  .nav-links a {
+    border: none;
+    padding: 0;
+    font-size: 1.1rem;
+    font-family: var(--font-body); /* Or var(--font-heading) based on preference */
+    color: var(--primary-teal);
+    text-transform: none; /* Matches the image provided */
+    letter-spacing: normal;
+    opacity: 1;
+    transform: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent-teal);
+  }
+
+  /* 5. Logo sizing */
+  .logo img { 
+    height: 55px; 
+    width: auto;
+  }
+
+  /* Hero: Split Screen */
+  .wedding-hero-wrapper {
+    flex-direction: row;
+    height: 90vh;
+  }
+  .hero-text-side {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+    text-align: left;
+  }
+  .separator-gold { margin: 0 0 20px 0; }
+  
+  .hero-slideshow-side { width: 60%; height: 100%; }
+
+  .hero-cta:hover { 
+    background: var(--primary-teal); 
+    color: var(--white); 
+  }
+
+  /* Details: Side by Side */
+  .details-section { padding: 100px 10%; }
+  .details-grid { 
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 80px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+  .detail-box { flex: 1; text-align: left; }
+  .detail-box h2 { font-size: 2.5rem; }
+  .deliverables-list { margin: 0; }
+
+  /* Projects: 3 Columns */
+  .projects-section { padding: 100px 5%; }
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .work-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+
+  /* CTA Hover */
+  .btn-primary:hover { 
+    background: var(--accent-teal); 
+    color: var(--white); 
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Planning — PLIXOEVENTS</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="wedding.css">
+</head>
+
+<body>
+
+  <header class="main-header">
+        <div class="nav-container">
+            <a href="../index.html#home" class="logo-link">
+                <img src="../images/plixo-final(copy).png" alt="Plixo Events" class="logo-img">
+            </a>
+      
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About Us</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#contact" class="contact-btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="wedding-hero-wrapper">
+    
+    <div class="hero-text-side">
+      <h1>Wedding Planning & Design</h1>
+      <div class="separator-gold"></div>
+      <p class="hero-desc">Thoughtfully designed weddings, beautifully executed from concept to celebration.</p>
+      <a href="#projects" class="hero-cta">View Our Portfolio</a>
+    </div>
+
+    <div class="hero-slideshow-side">
+      <div class="slideshow-window">
+          <div class="slideshow-container" id="weddingSlideshow" data-id="wedding">
+             </div>
+      </div>
+      
+      <button class="slide-btn prev" aria-label="Previous">&#10094;</button>
+      <button class="slide-btn next" aria-label="Next">&#10095;</button>
+      
+      <div class="slideshow-caption">
+          <h3>Love Stories</h3>
+          <p>Real moments from our signature weddings</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="details-section">
+    <div class="details-grid">
+      
+      <div class="detail-box philosophy-box">
+        <span class="icon-decorative">❧</span>
+        <h2>Our Philosophy</h2>
+        <p>
+          At PLIXOEVENTS, weddings are crafted with calm precision and emotional intelligence.
+          We focus on flow, timing, guest experience, and refined aesthetics so that every moment feels effortless and meaningful.
+        </p>
+      </div>
+
+      <div class="detail-box deliverables-box">
+        <span class="icon-decorative">❧</span>
+        <h2>What We Curate</h2>
+        <ul class="deliverables-list">
+          <li>Full Wedding Planning & Coordination</li>
+          <li>Destination Management</li>
+          <li>Décor & Floral Conceptualization</li>
+          <li>Vendor & Artist Curation</li>
+          <li>Guest Hospitality & Logistics</li>
+          <li>On-ground Execution</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <div class="section-header">
+      <h2>Signature Celebrations</h2>
+      <p class="section-sub">Where love meets legacy</p>
+    </div>
+    
+    <div class="work-grid">
+      
+      <div class="work-card">
+        <div class="work-image" style="background-image: url('../images/wedding-1.jpg');"></div>
+        <div class="work-content">
+          <h3>Royal Palace Wedding</h3>
+          <span class="location">Jaipur</span>
+          <p>
+            A three-day destination wedding blending heritage architecture with contemporary design.
+          </p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-image" style="background-image: url('../images/wedding-2.jpg');"></div>
+        <div class="work-content">
+          <h3>Modern Luxe Union</h3>
+          <span class="location">New Delhi</span>
+          <p>
+            Designed around clean palettes, precision lighting, and seamless timeline management.
+          </p>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-image" style="background-image: url('../images/wedding-3.jpg');"></div>
+        <div class="work-content">
+          <h3>Intimate Garden Vows</h3>
+          <span class="location">Udaipur</span>
+          <p>
+            A refined celebration with handcrafted décor designed for close family and friends.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content">
+        <h2>Begin Your Celebration</h2>
+        <p>Your wedding should feel calm, personal, and unforgettable.</p>
+        <a href="../index.html#contact" class="btn-primary">Plan My Wedding</a>
+    </div>
+  </section>
+
+  <div class="floating-socials">
+      <a href="https://wa.me/919355063737" target="_blank" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      
+      <a href="https://www.instagram.com/plixo_events/" target="_blank" class="float-btn instagram" aria-label="Visit Instagram">
+          <i class="fa-brands fa-instagram"></i>
+      </a>
+      
+      <a href="mailto:plixoevents@gmail.com" class="float-btn gmail" aria-label="Email Us">
+          <i class="fa-solid fa-envelope"></i>
+      </a>
+  </div>
+
+
+  <script src="wedding.js"></script>
+  <script src="/slideshow.js"></script>
+</body>
+</html>

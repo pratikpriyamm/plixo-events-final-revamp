@@ -1,0 +1,580 @@
+/* =========================================
+   VARIABLES & RESET (Private Theme)
+   ========================================= */
+:root {
+  --primary-teal: #073838;
+  --accent-teal: #0E5A5A;
+  --bg-light: #f4fffd;
+  --text-dark: #1A1A2E;
+  --text-grey: #666;
+
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* =========================================
+   HEADER (SMOOTH + PREMIUM DROPDOWN)
+   ========================================= */
+.main-header {
+  padding: 15px 20px;
+  background: #0E5A5A;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.logo-link { 
+    display: flex; 
+    align-items: center; 
+    height: 70px; /* Forces the link box to perfectly match the 70px navbar */
+    /* margin-left: -100px; */
+}
+
+.logo-img {
+    height: 100%; /* Stretches the image to fill the exact 70px height */
+    width: auto;  /* Keeps your logo perfectly proportioned so it doesn't squish */
+    object-fit: contain; 
+    display: block; /* Removes the invisible gap browsers put under inline images */
+}
+
+/* --- Mobile Menu --- */
+/* Mobile Menu – Animated */
+.nav-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+
+  display: flex;                 /* keep flex always */
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* Active state */
+.nav-links.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-links a {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links.active a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-links.active a:nth-child(1) { transition-delay: 0.05s; }
+.nav-links.active a:nth-child(2) { transition-delay: 0.1s; }
+.nav-links.active a:nth-child(3) { transition-delay: 0.15s; }
+.nav-links.active a:nth-child(4) { transition-delay: 0.2s; }
+
+.contact-btn { 
+  color: var(--primary-teal) !important; 
+  font-weight: 700 !important; 
+}
+
+
+/* Hamburger */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background: var(--text-dark);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.private-hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-light);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text-side {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero-text-side h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--primary-teal);
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: var(--text-grey);
+  margin-bottom: 25px;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--primary-teal);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+/* Slideshow */
+.hero-slideshow-side {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Locked height for mobile */
+  background: #000;
+  overflow: hidden; /* Prevents any part of the image from 'bleeding' out */
+}
+
+.slideshow-window,
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative; /* Anchor for absolute images */
+}
+
+.slide-img {
+  position: absolute;   /* 🔥 CRITICAL: Stacks images on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;        /* Controlled by JS classList */
+  opacity: 0;           /* Start at 0 for a smoother fade */
+  transition: opacity 1s ease-in-out; 
+}
+
+.slide-img.active {
+  display: block;
+  opacity: 1;           /* Fully visible when active */
+  z-index: 1;           /* Ensures it stays on the top layer */
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Controls */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  backdrop-filter: blur(5px);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.slideshow-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,130,130,0.9), transparent);
+  color: #fff;
+  padding: 20px;
+}
+
+/* =========================================
+   DETAILS SECTION
+   ========================================= */
+
+.details-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.detail-box {
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.icon-wrap {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.detail-box h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--primary-teal);
+  margin-bottom: 15px;
+}
+
+.deliverables-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.deliverables-list li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+/* =========================================
+   PROJECTS SECTION
+   ========================================= */
+
+.projects-section {
+  padding: 60px 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+}
+
+.section-header .line {
+  width: 50px;
+  height: 3px;
+  background: var(--primary-teal);
+  margin: 10px auto;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.work-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  background: #fff;
+}
+
+.work-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+.work-content {
+  padding: 25px;
+}
+
+.location {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   CTA SECTION
+   ========================================= */
+
+.cta-section {
+  position: relative;
+  background: var(--primary-teal);
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.cta-bg-layer {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(112,219,210,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 45px;
+  background-color: #ffffff; /* Clean white button */
+  color: var(--primary-teal); /* Teal text to match theme */
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px; /* Matches your portfolio button style */
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================================
+   DESKTOP NAV & LAYOUT
+   ========================================= */
+
+@media screen and (min-width: 1024px) {
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Aligns everything to the left */
+    align-items: center;
+    gap: 50px; /* Space between the logo and the start of the links */
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px; /* Adjust based on your header height */
+  }
+
+  /* 2. Hide the hamburger button on desktop */
+  .menu-toggle { 
+    display: none !important; 
+  }
+
+  /* 3. Reset the mobile menu into a horizontal row */
+  .nav-links {
+    white-space: nowrap;
+    position: static;      /* Removes absolute/fixed positioning */
+    display: flex;
+    flex-direction: row;   /* Horizontal layout */
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    gap: 35px;             /* Space between individual links */
+    opacity: 1;            /* Ensure visible */
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    width: auto;
+    height: auto;
+  }
+
+  /* 4. Style the links for desktop */
+  .nav-links a {
+    border: none;
+    padding: 0;
+    font-size: 1.1rem;
+    font-family: var(--font-body); /* Or var(--font-heading) based on preference */
+    color: var(--primary-teal);
+    text-transform: none; /* Matches the image provided */
+    letter-spacing: normal;
+    opacity: 1;
+    transform: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent-teal);
+  }
+
+  /* 5. Logo sizing */
+  .logo img { 
+    height: 55px; 
+    width: auto;
+  }
+
+  .private-hero-wrapper {
+    flex-direction: row;
+    height: 85vh;
+  }
+
+  .hero-text-side {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 80px;
+    text-align: left;
+  }
+
+.hero-slideshow-side {
+    position: relative;
+    width: 100%;
+    /* Forces the side to fill the container height without expanding */
+    height: 100%; 
+    overflow: hidden;
+    background-color: #000; /* Keeps a clean background if images load slow */
+}
+
+.slideshow-window, 
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Image Stacking Fix --- */
+.slide-img {
+    position: absolute; /* 🔥 CRITICAL: Stacks images on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures images fill the area perfectly */
+    display: none;      /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /* Optional: smooths the "ghosting" effect */
+}
+
+/* --- Active Image State --- */
+.slide-img.active {
+    display: block;
+    opacity: 1;
+    z-index: 1; /* Ensures the current image is the only one visible */
+}
+
+@media screen and (min-width: 1024px) {
+  /* 1. Ensure the grid container is ready */
+  .details-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Keeps boxes aligned at the top */
+    gap: 80px; /* Increased gap to match your reference image */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+
+  /* 2. Control the size of the boxes */
+  .detail-box {
+    /* This makes sure neither box takes up too much room */
+    flex: 1; 
+  }
+
+  /* Specifically styling the 'Approach' box (60% width) */
+  .approach-box {
+    flex: 0 0 60%; 
+    text-align: left; /* Aligns text to the left as seen in target image */
+  }
+
+  /* Specifically styling the 'What We Create' box (35% width) */
+  .deliverables-box {
+    flex: 0 0 35%;
+    text-align: left;
+  }
+
+  /* 3. Ensure the list items look clean */
+  .deliverables-list {
+    margin: 0;
+    width: 100%;
+  }
+}
+  .projects-section {
+    padding: 80px 5%;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+}
+
+/* planning section */
+.btn-primary {
+    padding: 18px 60px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  /* Hover Effect for Desktop */
+  .btn-primary:hover {
+    background-color: var(--accent-teal); /* Flips to turquoise on hover */
+    color: #ffffff;
+    transform: translateY(-3px); /* Subtle lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-primary:active {
+    transform: translateY(-1px);
+  }
