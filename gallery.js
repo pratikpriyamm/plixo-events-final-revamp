@@ -150,3 +150,4 @@ async function fetchGalleryData() {
     if (!response.ok) throw new Error("Failed to load gallery data");
     return await response.json();
 }
+
