@@ -118,14 +118,23 @@ async function loadFullPageGallery(container) {
 
         if (titleElement) titleElement.textContent = galleryData.title;
 
+        // --- LIGHTBOX UPDATE STARTS HERE ---
+
+        // Store the exact image paths globally so the lightbox knows what to cycle through
+        window.currentGalleryImages = galleryData.images.map(src => src.startsWith('./') ? src : `./${src}`);
+
         // Render Grid Images
         const fragment = document.createDocumentFragment();
-        galleryData.images.forEach(src => {
+        galleryData.images.forEach((src, index) => {
             const img = document.createElement("img");
-            // GitHub pages relative path fix
-            img.src = src.startsWith('./') ? src : `./${src}`;
+            // GitHub pages relative path fix applied to the new global array
+            img.src = window.currentGalleryImages[index];
             img.loading = "lazy";
             img.alt = galleryData.title;
+            
+            // NEW: Add the click event to open the lightbox
+            img.addEventListener('click', () => openLightbox(index));
+            
             fragment.appendChild(img);
         });
         
@@ -137,6 +146,54 @@ async function loadFullPageGallery(container) {
         document.getElementById("galleryTitle").textContent = "Error Loading Gallery";
     }
 }
+
+// ==========================================
+// LIGHTBOX CONTROLS
+// ==========================================
+let currentLightboxIndex = 0;
+
+function openLightbox(index) {
+    currentLightboxIndex = index;
+    const modal = document.getElementById("lightbox-modal");
+    const modalImg = document.getElementById("lightbox-img");
+    
+    // Show modal and set the image source
+    modal.style.display = "flex";
+    modalImg.src = window.currentGalleryImages[currentLightboxIndex];
+    
+    // Lock the background body from scrolling while lightbox is open
+    document.body.style.overflow = "hidden"; 
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox-modal").style.display = "none";
+    document.body.style.overflow = "auto"; // Unlock background scrolling
+}
+
+function changeLightboxImage(direction) {
+    currentLightboxIndex += direction;
+    
+    // Wrap around logic (if they hit next on the last image, go to the first)
+    if (currentLightboxIndex >= window.currentGalleryImages.length) {
+        currentLightboxIndex = 0;
+    } else if (currentLightboxIndex < 0) {
+        currentLightboxIndex = window.currentGalleryImages.length - 1;
+    }
+    
+    document.getElementById("lightbox-img").src = window.currentGalleryImages[currentLightboxIndex];
+}
+
+// Bonus: Let users use their keyboard to navigate!
+document.addEventListener('keydown', (e) => {
+    const modal = document.getElementById("lightbox-modal");
+    // Only fire if the modal is currently open
+    if (modal && modal.style.display === "block") {
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") changeLightboxImage(1);
+        if (e.key === "ArrowLeft") changeLightboxImage(-1);
+    }
+});
+
 
 // ==========================================
 // SHARED HELPER (Fetches JSON dynamically)
