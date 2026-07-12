@@ -172,7 +172,9 @@ body {
 
 /* Make grid images look clickable */
 .gallery-grid img {
-  cursor: pointer;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: center center;
 }
 
 /* Forces the slider images to fill the container perfectly */
@@ -187,6 +189,7 @@ body {
     height: 100%;
     max-height: 80vh; /* Adjust this if the slider is too tall */
     object-fit: cover; /* Ensures the image fills the space without stretching */
+    object-position: center center; /* <--- ADDED THIS HERE */
     display: block;
 }
 

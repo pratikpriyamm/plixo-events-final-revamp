@@ -180,38 +180,46 @@ body {
   font-weight: 500;
 }
 
-/* Slideshow */
+/* Hero Slideshow Side */
 .hero-slideshow-side {
   position: relative;
   width: 100%;
-  height: 300px; /* Locked height for mobile */
+  height: 350px;
   background: #000;
-  overflow: hidden; /* Prevents any part of the image from 'bleeding' out */
+  overflow: hidden;
 }
 
-.slideshow-window,
+.slideshow-window {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .slideshow-container {
   width: 100%;
   height: 100%;
-  position: relative; /* Anchor for absolute images */
+  position: relative;
 }
 
-.slide-img {
-  position: absolute;   /* 🔥 CRITICAL: Stacks images on top of each other */
-  top: 0;
-  left: 0;
+.mySlides {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.mySlides img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: none;        /* Controlled by JS classList */
-  opacity: 0;           /* Start at 0 for a smoother fade */
-  transition: opacity 1s ease-in-out; 
+  
+  /* ADD THIS: Forces the crop to center on the subject */
+  object-position: center center; 
+  
+  display: block;
 }
 
-.slide-img.active {
-  display: block;
-  opacity: 1;           /* Fully visible when active */
-  z-index: 1;           /* Ensures it stays on the top layer */
+.fade {
+  animation: fadeAnim 1.5s;
 }
 
 @keyframes fade {
